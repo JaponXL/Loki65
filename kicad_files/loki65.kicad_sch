@@ -6,18 +6,18 @@
 
   (title_block
     (title "Loki65 PCB schematic")
-    (date "2021-10-08")
-    (rev "v1.1.0")
+    (date "2021-10-15")
+    (rev "v1.1.1")
     (company "Designed by Gondolindrim")
     (comment 1 "For Hayden Chong")
   )
 
   (lib_symbols
-    (symbol "Connector_Generic:Conn_01x09" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+    (symbol "Connector_Generic:Conn_01x10" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
       (property "Reference" "J" (id 0) (at 0 12.7 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "Conn_01x09" (id 1) (at 0 -12.7 0)
+      (property "Value" "Conn_01x10" (id 1) (at 0 -15.24 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (id 2) (at 0 0 0)
@@ -29,13 +29,16 @@
       (property "ki_keywords" "connector" (id 4) (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Generic connector, single row, 01x09, script generated (kicad-library-utils/schlib/autogen/connector/)" (id 5) (at 0 0 0)
+      (property "ki_description" "Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)" (id 5) (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_fp_filters" "Connector*:*_1x??_*" (id 6) (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "Conn_01x09_1_1"
+      (symbol "Conn_01x10_1_1"
+        (rectangle (start -1.27 -12.573) (end 0 -12.827)
+          (stroke (width 0.1524)) (fill (type none))
+        )
         (rectangle (start -1.27 -10.033) (end 0 -10.287)
           (stroke (width 0.1524)) (fill (type none))
         )
@@ -63,12 +66,16 @@
         (rectangle (start -1.27 10.287) (end 0 10.033)
           (stroke (width 0.1524)) (fill (type none))
         )
-        (rectangle (start -1.27 11.43) (end 1.27 -11.43)
+        (rectangle (start -1.27 11.43) (end 1.27 -13.97)
           (stroke (width 0.254)) (fill (type background))
         )
         (pin passive line (at -5.08 10.16 0) (length 3.81)
           (name "Pin_1" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at -5.08 -12.7 0) (length 3.81)
+          (name "Pin_10" (effects (font (size 1.27 1.27))))
+          (number "10" (effects (font (size 1.27 1.27))))
         )
         (pin passive line (at -5.08 7.62 0) (length 3.81)
           (name "Pin_2" (effects (font (size 1.27 1.27))))
@@ -2431,7 +2438,6 @@
   (junction (at 768.35 38.735) (diameter 1.016) (color 0 0 0 0))
   (junction (at 774.065 128.905) (diameter 1.016) (color 0 0 0 0))
 
-  (no_connect (at 288.925 125.73) (uuid bc20a9a1-b5ce-4840-ab1b-1bea8d8e8b48))
   (no_connect (at 756.92 247.015) (uuid f6049123-44a2-4bd1-aeaa-7cac47272a16))
   (no_connect (at 756.92 249.555) (uuid 844cd3b7-3aad-426a-9b3e-fbe6b7dea716))
 
@@ -5966,6 +5972,13 @@
       (effects (font (size 2.032 2.032)) (justify left) hide)
     )
   )
+  (global_label "PB13" (shape bidirectional) (at 288.925 125.73 0) (fields_autoplaced)
+    (effects (font (size 2.032 2.032)) (justify left))
+    (uuid ed939677-3267-425b-9a4e-68d92898aa54)
+    (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 301.0251 125.603 0)
+      (effects (font (size 2.032 2.032)) (justify left) hide)
+    )
+  )
   (global_label "C3" (shape output) (at 288.925 132.08 0) (fields_autoplaced)
     (effects (font (size 2.032 2.032)) (justify left))
     (uuid 17b8987b-ba7c-454a-a0a7-ec63ff951c57)
@@ -6085,11 +6098,18 @@
       (effects (font (size 1.016 1.016)) (justify right) hide)
     )
   )
-  (global_label "3V3" (shape input) (at 368.935 78.74 180)
+  (global_label "3V3" (shape input) (at 368.935 76.2 180)
     (effects (font (size 1.016 1.016)) (justify right))
     (uuid 18f06940-fe11-4978-ad3a-836d2ccf3b0e)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 1109.345 148.59 0)
+    (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 1109.345 146.05 0)
       (effects (font (size 1.016 1.016)) hide)
+    )
+  )
+  (global_label "PB13" (shape bidirectional) (at 368.935 78.74 180) (fields_autoplaced)
+    (effects (font (size 1.016 1.016)) (justify right))
+    (uuid 15de7b3f-5e08-428b-ba4f-af0999d6c1ff)
+    (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 362.885 78.6765 0)
+      (effects (font (size 1.016 1.016)) (justify right) hide)
     )
   )
   (global_label "PA3" (shape bidirectional) (at 368.935 81.28 180) (fields_autoplaced)
@@ -6440,7 +6460,7 @@
   (symbol (lib_id "power:GND") (at 46.355 52.705 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 502e6360-06d4-4655-8e60-192df6cc7158)
-    (property "Reference" "#PWR04" (id 0) (at 40.005 52.705 0)
+    (property "Reference" "#PWR06" (id 0) (at 40.005 52.705 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 41.91 52.705 90)
@@ -6458,7 +6478,7 @@
   (symbol (lib_id "power:GND") (at 46.355 57.785 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 3b9e78a6-ed8f-4d3e-ba2d-f066d261222d)
-    (property "Reference" "#PWR08" (id 0) (at 40.005 57.785 0)
+    (property "Reference" "#PWR010" (id 0) (at 40.005 57.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 41.91 57.785 90)
@@ -6476,7 +6496,7 @@
   (symbol (lib_id "power:GND") (at 48.26 55.245 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid ca52fd70-a4ed-49fa-9e4a-afef167b12d7)
-    (property "Reference" "#PWR07" (id 0) (at 41.91 55.245 0)
+    (property "Reference" "#PWR09" (id 0) (at 41.91 55.245 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 43.815 55.245 90)
@@ -6494,7 +6514,7 @@
   (symbol (lib_id "power:GND") (at 58.42 62.865 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid de972ea1-0272-49aa-a5d0-16e246c5548c)
-    (property "Reference" "#PWR011" (id 0) (at 58.42 69.215 0)
+    (property "Reference" "#PWR014" (id 0) (at 58.42 69.215 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 58.42 66.675 0)
@@ -6512,7 +6532,7 @@
   (symbol (lib_id "power:GND") (at 64.77 45.72 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 2e2f0f7a-7a10-425d-b46d-b5ef3c5916b3)
-    (property "Reference" "#PWR01" (id 0) (at 71.12 45.72 0)
+    (property "Reference" "#PWR03" (id 0) (at 71.12 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 68.58 45.72 0)
@@ -6530,7 +6550,7 @@
   (symbol (lib_id "power:GND") (at 68.58 57.785 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid b56893c0-e20b-4468-b035-1f4387f4a8b4)
-    (property "Reference" "#PWR09" (id 0) (at 74.93 57.785 0)
+    (property "Reference" "#PWR011" (id 0) (at 74.93 57.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 72.39 57.785 0)
@@ -6548,7 +6568,7 @@
   (symbol (lib_id "power:GND") (at 125.73 471.17 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 262b6ab9-38b7-47fc-b9b9-8937f82c36ac)
-    (property "Reference" "#PWR067" (id 0) (at 125.73 477.52 0)
+    (property "Reference" "#PWR054" (id 0) (at 125.73 477.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 125.73 474.98 0)
@@ -6584,7 +6604,7 @@
   (symbol (lib_id "power:GND") (at 134.62 54.61 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 5e77a658-e0cd-4b62-a6a4-2305410f2942)
-    (property "Reference" "#PWR05" (id 0) (at 128.27 54.61 0)
+    (property "Reference" "#PWR07" (id 0) (at 128.27 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 129.54 54.61 90)
@@ -6620,7 +6640,7 @@
   (symbol (lib_id "power:GND") (at 137.16 504.825 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid be7d28c8-08e1-403a-9ec1-22c7795071a4)
-    (property "Reference" "#PWR054" (id 0) (at 143.51 504.825 0)
+    (property "Reference" "#PWR067" (id 0) (at 143.51 504.825 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 140.97 504.825 0)
@@ -6638,7 +6658,7 @@
   (symbol (lib_id "power:GND") (at 137.795 147.32 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 53a8f53f-38a3-47a0-a1a1-d446644ee34c)
-    (property "Reference" "#PWR018" (id 0) (at 137.795 153.67 0)
+    (property "Reference" "#PWR030" (id 0) (at 137.795 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 137.922 150.5712 90)
@@ -6656,7 +6676,7 @@
   (symbol (lib_id "power:GND") (at 144.145 129.54 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 67ba9740-067b-4fa9-b168-03d18f72ae73)
-    (property "Reference" "#PWR016" (id 0) (at 144.145 123.19 0)
+    (property "Reference" "#PWR023" (id 0) (at 144.145 123.19 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 144.018 126.2888 90)
@@ -6674,7 +6694,7 @@
   (symbol (lib_id "power:GND") (at 144.145 144.78 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid e87e86fd-d90f-482b-b45e-8fe93bb263a8)
-    (property "Reference" "#PWR017" (id 0) (at 144.145 151.13 0)
+    (property "Reference" "#PWR029" (id 0) (at 144.145 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 144.272 148.0312 90)
@@ -6692,7 +6712,7 @@
   (symbol (lib_id "power:GND") (at 150.495 147.32 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 4eacd81f-f9ab-4325-a273-2b99af8e5f5d)
-    (property "Reference" "#PWR019" (id 0) (at 150.495 153.67 0)
+    (property "Reference" "#PWR031" (id 0) (at 150.495 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 150.622 150.5712 90)
@@ -6710,7 +6730,7 @@
   (symbol (lib_id "power:GND") (at 153.035 69.85 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid aecc51d7-f012-41d7-a653-8783c53cbbd0)
-    (property "Reference" "#PWR013" (id 0) (at 159.385 69.85 0)
+    (property "Reference" "#PWR016" (id 0) (at 159.385 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 158.115 69.85 90)
@@ -6728,7 +6748,7 @@
   (symbol (lib_id "power:GND") (at 154.94 54.61 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 86f8284e-7d06-42ab-8be8-0de3a911e37a)
-    (property "Reference" "#PWR06" (id 0) (at 161.29 54.61 0)
+    (property "Reference" "#PWR08" (id 0) (at 161.29 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 160.02 54.61 90)
@@ -6746,7 +6766,7 @@
   (symbol (lib_id "power:GND") (at 154.94 62.23 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 93844290-9f25-45da-8e4b-3244a868a818)
-    (property "Reference" "#PWR010" (id 0) (at 161.29 62.23 0)
+    (property "Reference" "#PWR013" (id 0) (at 161.29 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 160.02 62.23 90)
@@ -6764,7 +6784,7 @@
   (symbol (lib_id "power:GND") (at 163.83 471.17 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid d3b43fc2-f1ce-4b53-aab3-d4ac5909b4b1)
-    (property "Reference" "#PWR068" (id 0) (at 163.83 477.52 0)
+    (property "Reference" "#PWR055" (id 0) (at 163.83 477.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 163.83 474.98 0)
@@ -6818,7 +6838,7 @@
   (symbol (lib_id "power:GND") (at 175.26 504.825 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 46f7d839-08cc-483f-9c27-3e358dfa9e24)
-    (property "Reference" "#PWR055" (id 0) (at 181.61 504.825 0)
+    (property "Reference" "#PWR068" (id 0) (at 181.61 504.825 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 179.07 504.825 0)
@@ -6836,7 +6856,7 @@
   (symbol (lib_id "power:GND") (at 188.595 105.41 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 77eee335-b040-4c8b-bf04-e4476acd2b92)
-    (property "Reference" "#PWR015" (id 0) (at 182.245 105.41 0)
+    (property "Reference" "#PWR022" (id 0) (at 182.245 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 185.42 105.41 0)
@@ -6854,7 +6874,7 @@
   (symbol (lib_id "power:GND") (at 200.025 52.07 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid c8275101-1364-40ab-b017-f62d46a82121)
-    (property "Reference" "#PWR03" (id 0) (at 200.025 45.72 0)
+    (property "Reference" "#PWR05" (id 0) (at 200.025 45.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 200.025 48.895 0)
@@ -6872,7 +6892,7 @@
   (symbol (lib_id "power:GND") (at 201.93 471.17 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 7bb31999-a90c-4237-8fc8-80e52cac6c05)
-    (property "Reference" "#PWR069" (id 0) (at 201.93 477.52 0)
+    (property "Reference" "#PWR056" (id 0) (at 201.93 477.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 201.93 474.98 0)
@@ -6926,7 +6946,7 @@
   (symbol (lib_id "power:GND") (at 213.36 504.825 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 446d1576-09e4-4f2c-9146-95ab9b902925)
-    (property "Reference" "#PWR056" (id 0) (at 219.71 504.825 0)
+    (property "Reference" "#PWR069" (id 0) (at 219.71 504.825 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 217.17 504.825 0)
@@ -6944,7 +6964,7 @@
   (symbol (lib_id "power:GND") (at 216.535 46.355 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 8a74ce62-1f55-4ee1-a4e4-e97e757c9733)
-    (property "Reference" "#PWR02" (id 0) (at 216.535 40.005 0)
+    (property "Reference" "#PWR04" (id 0) (at 216.535 40.005 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 216.535 43.18 0)
@@ -6962,7 +6982,7 @@
   (symbol (lib_id "power:GND") (at 240.03 471.17 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 906cb75a-590a-4a3a-9589-f5cd57c6e3c4)
-    (property "Reference" "#PWR070" (id 0) (at 240.03 477.52 0)
+    (property "Reference" "#PWR057" (id 0) (at 240.03 477.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 240.03 474.98 0)
@@ -7016,7 +7036,7 @@
   (symbol (lib_id "power:GND") (at 251.46 504.825 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 9faa2b8d-c01e-43e5-9e77-2c4bbb95fb9f)
-    (property "Reference" "#PWR057" (id 0) (at 257.81 504.825 0)
+    (property "Reference" "#PWR070" (id 0) (at 257.81 504.825 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 255.27 504.825 0)
@@ -7034,7 +7054,7 @@
   (symbol (lib_id "power:GND") (at 267.335 148.59 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 2c585256-384a-4afe-a19d-c231b5f31c7a)
-    (property "Reference" "#PWR020" (id 0) (at 267.335 154.94 0)
+    (property "Reference" "#PWR032" (id 0) (at 267.335 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 267.335 153.3652 90)
@@ -7052,7 +7072,7 @@
   (symbol (lib_id "power:GND") (at 273.685 151.765 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid c25e99c6-1a86-494c-b523-349172c7b034)
-    (property "Reference" "#PWR021" (id 0) (at 273.685 158.115 0)
+    (property "Reference" "#PWR033" (id 0) (at 273.685 158.115 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 273.685 154.94 0)
@@ -7070,7 +7090,7 @@
   (symbol (lib_id "power:GND") (at 278.13 471.17 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid ef00a706-d668-4538-8468-294bd568ea52)
-    (property "Reference" "#PWR071" (id 0) (at 278.13 477.52 0)
+    (property "Reference" "#PWR058" (id 0) (at 278.13 477.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 278.13 474.98 0)
@@ -7124,7 +7144,7 @@
   (symbol (lib_id "power:GND") (at 289.56 504.825 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid f8302f94-0937-42da-84c6-3218d3f72195)
-    (property "Reference" "#PWR058" (id 0) (at 295.91 504.825 0)
+    (property "Reference" "#PWR071" (id 0) (at 295.91 504.825 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 293.37 504.825 0)
@@ -7142,7 +7162,7 @@
   (symbol (lib_id "power:GND") (at 300.99 68.58 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 1015f781-03a4-42ba-8342-61eb0832c7a0)
-    (property "Reference" "#PWR012" (id 0) (at 307.34 68.58 0)
+    (property "Reference" "#PWR015" (id 0) (at 307.34 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 304.165 68.58 0)
@@ -7160,7 +7180,7 @@
   (symbol (lib_id "power:GND") (at 316.23 471.17 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 1de5a374-771d-4b22-82b5-fd2c64a865b0)
-    (property "Reference" "#PWR072" (id 0) (at 316.23 477.52 0)
+    (property "Reference" "#PWR059" (id 0) (at 316.23 477.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 316.23 474.98 0)
@@ -7214,7 +7234,7 @@
   (symbol (lib_id "power:GND") (at 327.66 504.825 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 02273aee-20d4-4d39-865c-5891719128e4)
-    (property "Reference" "#PWR059" (id 0) (at 334.01 504.825 0)
+    (property "Reference" "#PWR072" (id 0) (at 334.01 504.825 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 331.47 504.825 0)
@@ -7232,7 +7252,7 @@
   (symbol (lib_id "power:GND") (at 354.33 471.17 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid e18776ca-8ad0-4945-b9c5-e033b60f4efc)
-    (property "Reference" "#PWR073" (id 0) (at 354.33 477.52 0)
+    (property "Reference" "#PWR060" (id 0) (at 354.33 477.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 354.33 474.98 0)
@@ -7286,7 +7306,7 @@
   (symbol (lib_id "power:GND") (at 365.76 504.825 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 67455e65-a590-4272-99d2-60e294fec326)
-    (property "Reference" "#PWR060" (id 0) (at 372.11 504.825 0)
+    (property "Reference" "#PWR073" (id 0) (at 372.11 504.825 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 369.57 504.825 0)
@@ -7304,7 +7324,7 @@
   (symbol (lib_id "power:GND") (at 368.935 99.06 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid e73eed80-c6fc-4b29-a856-93e1e878c225)
-    (property "Reference" "#PWR014" (id 0) (at 368.935 105.41 0)
+    (property "Reference" "#PWR020" (id 0) (at 368.935 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 368.935 103.8352 90)
@@ -7322,7 +7342,7 @@
   (symbol (lib_id "power:GND") (at 392.43 471.17 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 0230d657-b3f5-4a6b-abe4-b5f948fbf615)
-    (property "Reference" "#PWR074" (id 0) (at 392.43 477.52 0)
+    (property "Reference" "#PWR061" (id 0) (at 392.43 477.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 392.43 474.98 0)
@@ -7376,7 +7396,7 @@
   (symbol (lib_id "power:GND") (at 403.86 504.825 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 53e071bb-e8da-4134-a645-5751d71d6ea9)
-    (property "Reference" "#PWR061" (id 0) (at 410.21 504.825 0)
+    (property "Reference" "#PWR074" (id 0) (at 410.21 504.825 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 407.67 504.825 0)
@@ -7394,7 +7414,7 @@
   (symbol (lib_id "power:GND") (at 430.53 471.17 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 8612f32b-1c60-47fc-a38f-0a4c58b06341)
-    (property "Reference" "#PWR075" (id 0) (at 430.53 477.52 0)
+    (property "Reference" "#PWR062" (id 0) (at 430.53 477.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 430.53 474.98 0)
@@ -7448,7 +7468,7 @@
   (symbol (lib_id "power:GND") (at 441.96 504.825 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid bd72b8d8-a7f6-4677-9339-cb1701a66043)
-    (property "Reference" "#PWR062" (id 0) (at 448.31 504.825 0)
+    (property "Reference" "#PWR075" (id 0) (at 448.31 504.825 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 445.77 504.825 0)
@@ -7466,7 +7486,7 @@
   (symbol (lib_id "power:GND") (at 457.835 93.345 270) (mirror x) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 518aa19e-da52-4178-9e36-88a34bbed272)
-    (property "Reference" "#PWR024" (id 0) (at 451.485 93.345 0)
+    (property "Reference" "#PWR019" (id 0) (at 451.485 93.345 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 454.66 93.345 0)
@@ -7484,7 +7504,7 @@
   (symbol (lib_id "power:GND") (at 466.09 73.66 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 767cb4cb-093f-4717-bdc6-7c31b550e640)
-    (property "Reference" "#PWR022" (id 0) (at 472.44 73.66 0)
+    (property "Reference" "#PWR018" (id 0) (at 472.44 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 469.265 73.66 0)
@@ -7502,7 +7522,7 @@
   (symbol (lib_id "power:GND") (at 468.63 471.17 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 36bb0cf5-fd81-43e3-894f-fe6f4338ebe2)
-    (property "Reference" "#PWR076" (id 0) (at 468.63 477.52 0)
+    (property "Reference" "#PWR063" (id 0) (at 468.63 477.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 468.63 474.98 0)
@@ -7538,7 +7558,7 @@
   (symbol (lib_id "power:GND") (at 477.52 102.235 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid e8bd9950-cdc5-499a-9221-0022513ee313)
-    (property "Reference" "#PWR025" (id 0) (at 477.52 108.585 0)
+    (property "Reference" "#PWR021" (id 0) (at 477.52 108.585 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 477.52 105.41 0)
@@ -7574,7 +7594,7 @@
   (symbol (lib_id "power:GND") (at 480.06 504.825 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 969115dc-0a0e-41a5-92db-278a0c7900be)
-    (property "Reference" "#PWR063" (id 0) (at 486.41 504.825 0)
+    (property "Reference" "#PWR076" (id 0) (at 486.41 504.825 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 483.87 504.825 0)
@@ -7592,7 +7612,7 @@
   (symbol (lib_id "power:GND") (at 502.92 71.12 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid bacb48ad-ea74-4768-aa8a-0421fe6e8244)
-    (property "Reference" "#PWR023" (id 0) (at 509.27 71.12 0)
+    (property "Reference" "#PWR017" (id 0) (at 509.27 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 506.095 71.12 0)
@@ -7610,7 +7630,7 @@
   (symbol (lib_id "power:GND") (at 506.73 471.17 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 16c36eb5-a2ee-4fc8-b6d0-2b804938045a)
-    (property "Reference" "#PWR077" (id 0) (at 506.73 477.52 0)
+    (property "Reference" "#PWR064" (id 0) (at 506.73 477.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 506.73 474.98 0)
@@ -7664,7 +7684,7 @@
   (symbol (lib_id "power:GND") (at 518.16 504.825 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 76b93b87-028d-4a7f-869f-045bf2b3f6f4)
-    (property "Reference" "#PWR064" (id 0) (at 524.51 504.825 0)
+    (property "Reference" "#PWR077" (id 0) (at 524.51 504.825 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 521.97 504.825 0)
@@ -7682,7 +7702,7 @@
   (symbol (lib_id "power:GND") (at 544.83 471.17 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 2659f97c-a8bd-45cc-903f-41867b48e4e5)
-    (property "Reference" "#PWR078" (id 0) (at 544.83 477.52 0)
+    (property "Reference" "#PWR065" (id 0) (at 544.83 477.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 544.83 474.98 0)
@@ -7736,7 +7756,7 @@
   (symbol (lib_id "power:GND") (at 556.26 504.825 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 88d38e58-eb9c-424a-baf8-6399d2d1ec34)
-    (property "Reference" "#PWR065" (id 0) (at 562.61 504.825 0)
+    (property "Reference" "#PWR078" (id 0) (at 562.61 504.825 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 560.07 504.825 0)
@@ -7754,7 +7774,7 @@
   (symbol (lib_id "power:GND") (at 582.93 471.17 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 4af216d5-55c3-4caa-a266-e3bade1bd8ee)
-    (property "Reference" "#PWR079" (id 0) (at 582.93 477.52 0)
+    (property "Reference" "#PWR066" (id 0) (at 582.93 477.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 582.93 474.98 0)
@@ -7808,7 +7828,7 @@
   (symbol (lib_id "power:GND") (at 594.36 504.825 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid ee8bf0e6-9b46-4952-a46f-b0cdc46dd000)
-    (property "Reference" "#PWR066" (id 0) (at 600.71 504.825 0)
+    (property "Reference" "#PWR079" (id 0) (at 600.71 504.825 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 598.17 504.825 0)
@@ -7826,7 +7846,7 @@
   (symbol (lib_id "power:GND") (at 738.505 142.24 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 0c01dec0-4120-44fa-bbf0-57493123b236)
-    (property "Reference" "#PWR030" (id 0) (at 738.505 148.59 0)
+    (property "Reference" "#PWR025" (id 0) (at 738.505 148.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 738.505 145.415 0)
@@ -7862,7 +7882,7 @@
   (symbol (lib_id "power:GND") (at 744.855 142.24 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 32ac5e0d-582e-4eb3-84c5-43758f7844ff)
-    (property "Reference" "#PWR031" (id 0) (at 744.855 148.59 0)
+    (property "Reference" "#PWR026" (id 0) (at 744.855 148.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 744.855 145.415 0)
@@ -7880,7 +7900,7 @@
   (symbol (lib_id "power:GND") (at 751.84 38.735 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid d550c967-eeb7-4a54-a37a-2e770313bc77)
-    (property "Reference" "#PWR026" (id 0) (at 745.49 38.735 0)
+    (property "Reference" "#PWR01" (id 0) (at 745.49 38.735 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 748.03 38.735 0)
@@ -7898,7 +7918,7 @@
   (symbol (lib_id "power:GND") (at 755.65 137.795 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 634e02ac-9c92-4052-9d67-4a6a8b01150d)
-    (property "Reference" "#PWR029" (id 0) (at 755.65 144.145 0)
+    (property "Reference" "#PWR024" (id 0) (at 755.65 144.145 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 755.65 140.97 0)
@@ -7952,7 +7972,7 @@
   (symbol (lib_id "power:GND") (at 765.175 142.24 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid a4ba51d2-f35a-4841-ad25-ea098a52eb30)
-    (property "Reference" "#PWR032" (id 0) (at 765.175 148.59 0)
+    (property "Reference" "#PWR027" (id 0) (at 765.175 148.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 765.175 145.415 0)
@@ -7970,7 +7990,7 @@
   (symbol (lib_id "power:GND") (at 765.81 60.96 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 7e439bc3-fe0c-4246-a7b1-937d8fbd1cdd)
-    (property "Reference" "#PWR028" (id 0) (at 765.81 67.31 0)
+    (property "Reference" "#PWR012" (id 0) (at 765.81 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 765.81 64.77 0)
@@ -8024,7 +8044,7 @@
   (symbol (lib_id "power:GND") (at 774.065 142.24 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 472d5718-e734-456e-9e69-3d408eb6cb33)
-    (property "Reference" "#PWR033" (id 0) (at 774.065 148.59 0)
+    (property "Reference" "#PWR028" (id 0) (at 774.065 148.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 774.065 145.415 0)
@@ -8042,7 +8062,7 @@
   (symbol (lib_id "power:GND") (at 779.78 38.735 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 82ddcf6a-40be-4669-90c0-9e14391854db)
-    (property "Reference" "#PWR027" (id 0) (at 786.13 38.735 0)
+    (property "Reference" "#PWR02" (id 0) (at 786.13 38.735 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 783.59 38.735 0)
@@ -8104,7 +8124,7 @@
   (symbol (lib_id "Device:R_Small") (at 146.05 69.85 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid ed4e6af4-f2d9-4070-a527-8e3ff1fcde5a)
-    (property "Reference" "R3" (id 0) (at 146.05 71.755 90)
+    (property "Reference" "R4" (id 0) (at 146.05 71.755 90)
       (effects (font (size 0.7874 0.7874)))
     )
     (property "Value" "10k" (id 1) (at 146.05 69.85 90)
@@ -8346,7 +8366,7 @@
   (symbol (lib_id "Device:R_Small") (at 302.895 100.33 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 34ea83e5-e2d3-46d3-99be-b50d1ceb6d4f)
-    (property "Reference" "R5" (id 0) (at 302.895 102.235 90)
+    (property "Reference" "R9" (id 0) (at 302.895 102.235 90)
       (effects (font (size 0.7874 0.7874)))
     )
     (property "Value" "0R" (id 1) (at 302.895 100.33 90)
@@ -8368,7 +8388,7 @@
   (symbol (lib_id "Device:R_Small") (at 306.07 81.28 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 733bdb7e-01f4-4787-850a-50e92efa88e6)
-    (property "Reference" "R4" (id 0) (at 306.07 83.185 90)
+    (property "Reference" "R7" (id 0) (at 306.07 83.185 90)
       (effects (font (size 0.7874 0.7874)))
     )
     (property "Value" "1.5k" (id 1) (at 306.07 81.28 90)
@@ -8478,7 +8498,7 @@
   (symbol (lib_id "Device:R_Small") (at 355.6 141.605 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid aeda58cd-14ae-43a8-ac0f-9fac919d7fa0)
-    (property "Reference" "R6" (id 0) (at 357.505 141.605 90)
+    (property "Reference" "R12" (id 0) (at 357.505 141.605 90)
       (effects (font (size 0.7874 0.7874)))
     )
     (property "Value" "1k" (id 1) (at 355.6 141.605 90)
@@ -8588,7 +8608,7 @@
   (symbol (lib_id "Device:R_Small") (at 449.58 71.12 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 7ef00487-7fa6-40f3-bc7b-6b30e4b42696)
-    (property "Reference" "R7" (id 0) (at 449.5799 69.215 90)
+    (property "Reference" "R5" (id 0) (at 449.5799 69.215 90)
       (effects (font (size 0.762 0.762)))
     )
     (property "Value" "10k" (id 1) (at 449.58 71.12 90)
@@ -8654,7 +8674,7 @@
   (symbol (lib_id "Device:R_Small") (at 473.71 93.345 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 71c337be-b887-4633-90f8-560dd9c7776b)
-    (property "Reference" "R9" (id 0) (at 473.71 95.25 90)
+    (property "Reference" "R8" (id 0) (at 473.71 95.25 90)
       (effects (font (size 0.762 0.762)))
     )
     (property "Value" "100R" (id 1) (at 473.71 93.345 90)
@@ -8676,7 +8696,7 @@
   (symbol (lib_id "Device:R_Small") (at 497.84 71.12 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 5ec0a5c7-81be-47f3-af93-6a5abcc41c1f)
-    (property "Reference" "R8" (id 0) (at 497.8399 69.215 90)
+    (property "Reference" "R6" (id 0) (at 497.8399 69.215 90)
       (effects (font (size 0.762 0.762)))
     )
     (property "Value" "10k" (id 1) (at 497.84 71.12 90)
@@ -8830,7 +8850,7 @@
   (symbol (lib_id "Device:R_Small") (at 749.935 53.975 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 406aee99-6416-447b-b357-33b3467fae0a)
-    (property "Reference" "R10" (id 0) (at 749.935 52.07 90)
+    (property "Reference" "R3" (id 0) (at 749.935 52.07 90)
       (effects (font (size 0.7874 0.7874)))
     )
     (property "Value" "10k" (id 1) (at 749.935 53.975 90)
@@ -8896,7 +8916,7 @@
   (symbol (lib_id "Device:D_Small") (at 130.175 233.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 6bbe74d4-9a94-4f52-93ab-dfaf149103af)
-    (property "Reference" "D1" (id 0) (at 132.715 232.4099 90)
+    (property "Reference" "D2" (id 0) (at 132.715 232.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 132.715 234.9499 90)
@@ -8921,7 +8941,7 @@
   (symbol (lib_id "Device:D_Small") (at 130.175 265.43 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 172da646-d8d3-4285-aafe-b6ffe1c8890f)
-    (property "Reference" "D16" (id 0) (at 132.715 264.1599 90)
+    (property "Reference" "D17" (id 0) (at 132.715 264.1599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 132.715 266.6999 90)
@@ -8946,7 +8966,7 @@
   (symbol (lib_id "Device:D_Small") (at 130.175 297.18 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid e4ed29ce-b9a5-423f-8677-f10a34b6ce99)
-    (property "Reference" "D31" (id 0) (at 132.715 295.9099 90)
+    (property "Reference" "D32" (id 0) (at 132.715 295.9099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 132.715 298.4499 90)
@@ -8971,7 +8991,7 @@
   (symbol (lib_id "Device:D_Small") (at 130.175 328.93 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 47c7e554-2eaf-463f-a06c-4b8568096b3b)
-    (property "Reference" "D46" (id 0) (at 132.715 327.6599 90)
+    (property "Reference" "D47" (id 0) (at 132.715 327.6599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 132.715 330.1999 90)
@@ -8996,7 +9016,7 @@
   (symbol (lib_id "Device:D_Small") (at 130.175 360.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid e921f6c9-f49b-490e-96ae-0e83a529707c)
-    (property "Reference" "D61" (id 0) (at 132.715 359.4099 90)
+    (property "Reference" "D62" (id 0) (at 132.715 359.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 132.715 361.9499 90)
@@ -9021,7 +9041,7 @@
   (symbol (lib_id "Device:D_Small") (at 155.575 233.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 06723eea-f0d7-4c29-8d7c-8173a94f3f24)
-    (property "Reference" "D2" (id 0) (at 158.115 232.4099 90)
+    (property "Reference" "D3" (id 0) (at 158.115 232.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 158.115 234.9499 90)
@@ -9046,7 +9066,7 @@
   (symbol (lib_id "Device:D_Small") (at 155.575 265.43 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid cebc3f54-ba28-41c1-9f58-4cb993abb353)
-    (property "Reference" "D17" (id 0) (at 158.115 264.1599 90)
+    (property "Reference" "D18" (id 0) (at 158.115 264.1599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 158.115 266.6999 90)
@@ -9071,7 +9091,7 @@
   (symbol (lib_id "Device:D_Small") (at 155.575 297.18 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 962cb0a1-e04e-4d11-99df-a27aa2c9d3ab)
-    (property "Reference" "D32" (id 0) (at 158.115 295.9099 90)
+    (property "Reference" "D33" (id 0) (at 158.115 295.9099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 158.115 298.4499 90)
@@ -9096,7 +9116,7 @@
   (symbol (lib_id "Device:D_Small") (at 155.575 328.93 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 292cb109-837a-429c-a26f-beb357cf9bd3)
-    (property "Reference" "D47" (id 0) (at 158.115 327.6599 90)
+    (property "Reference" "D48" (id 0) (at 158.115 327.6599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 158.115 330.1999 90)
@@ -9121,7 +9141,7 @@
   (symbol (lib_id "Device:D_Small") (at 155.575 360.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid c09cf194-b894-40a1-b03f-f603a9c61c09)
-    (property "Reference" "D62" (id 0) (at 158.115 359.4099 90)
+    (property "Reference" "D63" (id 0) (at 158.115 359.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 158.115 361.9499 90)
@@ -9146,7 +9166,7 @@
   (symbol (lib_id "Device:D_Small") (at 180.975 233.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 513eedff-6b89-4842-bdd2-793e3330584b)
-    (property "Reference" "D3" (id 0) (at 183.515 232.4099 90)
+    (property "Reference" "D4" (id 0) (at 183.515 232.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 183.515 234.9499 90)
@@ -9171,7 +9191,7 @@
   (symbol (lib_id "Device:D_Small") (at 180.975 265.43 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid b9e2370a-2b0d-4cc7-87cc-aa8c3de3f2a1)
-    (property "Reference" "D18" (id 0) (at 183.515 264.1599 90)
+    (property "Reference" "D19" (id 0) (at 183.515 264.1599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 183.515 266.6999 90)
@@ -9196,7 +9216,7 @@
   (symbol (lib_id "Device:D_Small") (at 180.975 297.18 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid cec74564-9cb0-47ac-8908-1ddcb376f25b)
-    (property "Reference" "D33" (id 0) (at 183.515 295.9099 90)
+    (property "Reference" "D34" (id 0) (at 183.515 295.9099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 183.515 298.4499 90)
@@ -9221,7 +9241,7 @@
   (symbol (lib_id "Device:D_Small") (at 180.975 328.93 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 8751dfe5-0ca5-4f96-b6e3-71a7f7a242bf)
-    (property "Reference" "D48" (id 0) (at 183.515 327.6599 90)
+    (property "Reference" "D49" (id 0) (at 183.515 327.6599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 183.515 330.1999 90)
@@ -9246,7 +9266,7 @@
   (symbol (lib_id "Device:D_Small") (at 180.975 360.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid c1c2f75a-76a2-4e4d-a865-ccc9b840f3d2)
-    (property "Reference" "D63" (id 0) (at 183.515 359.4099 90)
+    (property "Reference" "D64" (id 0) (at 183.515 359.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 183.515 361.9499 90)
@@ -9271,7 +9291,7 @@
   (symbol (lib_id "Device:D_Small") (at 206.375 233.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 16ea943f-f171-42e6-810d-2ea3f78deb94)
-    (property "Reference" "D4" (id 0) (at 208.915 232.4099 90)
+    (property "Reference" "D5" (id 0) (at 208.915 232.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 208.915 234.9499 90)
@@ -9296,7 +9316,7 @@
   (symbol (lib_id "Device:D_Small") (at 206.375 265.43 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid ae9aae55-e268-425e-8c76-acf451d5d7d7)
-    (property "Reference" "D19" (id 0) (at 208.915 264.1599 90)
+    (property "Reference" "D20" (id 0) (at 208.915 264.1599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 208.915 266.6999 90)
@@ -9321,7 +9341,7 @@
   (symbol (lib_id "Device:D_Small") (at 206.375 297.18 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 7f3bbd6b-dfd0-4e59-96b5-c33a1a98f998)
-    (property "Reference" "D34" (id 0) (at 208.915 295.9099 90)
+    (property "Reference" "D35" (id 0) (at 208.915 295.9099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 208.915 298.4499 90)
@@ -9346,7 +9366,7 @@
   (symbol (lib_id "Device:D_Small") (at 206.375 328.93 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 4aa40c63-66fe-480c-b415-9f60b27a9c18)
-    (property "Reference" "D49" (id 0) (at 208.915 327.6599 90)
+    (property "Reference" "D50" (id 0) (at 208.915 327.6599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 208.915 330.1999 90)
@@ -9371,7 +9391,7 @@
   (symbol (lib_id "Device:D_Small") (at 231.775 233.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid cea538c7-90fa-407e-94dd-21168bac5dd0)
-    (property "Reference" "D5" (id 0) (at 234.315 232.4099 90)
+    (property "Reference" "D6" (id 0) (at 234.315 232.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 234.315 234.9499 90)
@@ -9396,7 +9416,7 @@
   (symbol (lib_id "Device:D_Small") (at 231.775 265.43 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid ff022185-47cd-4ee7-8ebe-44d60e8f56d7)
-    (property "Reference" "D20" (id 0) (at 234.315 264.1599 90)
+    (property "Reference" "D21" (id 0) (at 234.315 264.1599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 234.315 266.6999 90)
@@ -9421,7 +9441,7 @@
   (symbol (lib_id "Device:D_Small") (at 231.775 297.18 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid dfcc2fb5-fdf2-4bc4-bb1a-6bdcce26d22f)
-    (property "Reference" "D35" (id 0) (at 234.315 295.9099 90)
+    (property "Reference" "D36" (id 0) (at 234.315 295.9099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 234.315 298.4499 90)
@@ -9446,7 +9466,7 @@
   (symbol (lib_id "Device:D_Small") (at 231.775 328.93 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid e757b3a3-8925-44dc-afac-a46514a64b83)
-    (property "Reference" "D50" (id 0) (at 234.315 327.6599 90)
+    (property "Reference" "D51" (id 0) (at 234.315 327.6599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 234.315 330.1999 90)
@@ -9471,7 +9491,7 @@
   (symbol (lib_id "Device:D_Small") (at 257.175 233.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 6506de9e-9757-43ab-a552-83016ed23f7f)
-    (property "Reference" "D6" (id 0) (at 259.715 232.4099 90)
+    (property "Reference" "D7" (id 0) (at 259.715 232.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 259.715 234.9499 90)
@@ -9496,7 +9516,7 @@
   (symbol (lib_id "Device:D_Small") (at 257.175 265.43 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 4f6e6500-c971-4a2f-9377-9eeedbaaeb34)
-    (property "Reference" "D21" (id 0) (at 259.715 264.1599 90)
+    (property "Reference" "D22" (id 0) (at 259.715 264.1599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 259.715 266.6999 90)
@@ -9521,7 +9541,7 @@
   (symbol (lib_id "Device:D_Small") (at 257.175 297.18 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 05933246-f609-4dd3-b8a2-9a82aae9dd29)
-    (property "Reference" "D36" (id 0) (at 259.715 295.9099 90)
+    (property "Reference" "D37" (id 0) (at 259.715 295.9099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 259.715 298.4499 90)
@@ -9546,7 +9566,7 @@
   (symbol (lib_id "Device:D_Small") (at 257.175 328.93 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid e7b663a1-ecaa-4c0d-b58a-ce940543ea6d)
-    (property "Reference" "D51" (id 0) (at 259.715 327.6599 90)
+    (property "Reference" "D52" (id 0) (at 259.715 327.6599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 259.715 330.1999 90)
@@ -9571,7 +9591,7 @@
   (symbol (lib_id "Device:D_Small") (at 282.575 233.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 18273649-a709-4922-a96a-acda878e952a)
-    (property "Reference" "D7" (id 0) (at 285.115 232.4099 90)
+    (property "Reference" "D8" (id 0) (at 285.115 232.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 285.115 234.9499 90)
@@ -9596,7 +9616,7 @@
   (symbol (lib_id "Device:D_Small") (at 282.575 265.43 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 178cb752-590f-4fab-bff2-1dff20aece4b)
-    (property "Reference" "D22" (id 0) (at 285.115 264.1599 90)
+    (property "Reference" "D23" (id 0) (at 285.115 264.1599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 285.115 266.6999 90)
@@ -9621,7 +9641,7 @@
   (symbol (lib_id "Device:D_Small") (at 282.575 297.18 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 2a7de098-6735-44a7-8389-abca70b90bb2)
-    (property "Reference" "D37" (id 0) (at 285.115 295.9099 90)
+    (property "Reference" "D38" (id 0) (at 285.115 295.9099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 285.115 298.4499 90)
@@ -9646,7 +9666,7 @@
   (symbol (lib_id "Device:D_Small") (at 282.575 328.93 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid ffe08c13-555b-4df6-974e-8600815bc605)
-    (property "Reference" "D52" (id 0) (at 285.115 327.6599 90)
+    (property "Reference" "D53" (id 0) (at 285.115 327.6599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 285.115 330.1999 90)
@@ -9671,7 +9691,7 @@
   (symbol (lib_id "Device:D_Small") (at 282.575 360.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 43ad677e-5c82-47ae-af9f-6e3fc5d9dd77)
-    (property "Reference" "D64" (id 0) (at 285.115 359.4099 90)
+    (property "Reference" "D65" (id 0) (at 285.115 359.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 285.115 361.9499 90)
@@ -9696,7 +9716,7 @@
   (symbol (lib_id "Device:D_Small") (at 307.975 233.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid e4efcbea-49e7-4abb-99b9-ada940950767)
-    (property "Reference" "D8" (id 0) (at 310.515 232.4099 90)
+    (property "Reference" "D9" (id 0) (at 310.515 232.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 310.515 234.9499 90)
@@ -9721,7 +9741,7 @@
   (symbol (lib_id "Device:D_Small") (at 307.975 265.43 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 75f0cc28-8257-4c04-bd85-6032845d05d0)
-    (property "Reference" "D23" (id 0) (at 310.515 264.1599 90)
+    (property "Reference" "D24" (id 0) (at 310.515 264.1599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 310.515 266.6999 90)
@@ -9746,7 +9766,7 @@
   (symbol (lib_id "Device:D_Small") (at 307.975 297.18 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 9a474287-d1d6-47fc-b694-60945a4a33cd)
-    (property "Reference" "D38" (id 0) (at 310.515 295.9099 90)
+    (property "Reference" "D39" (id 0) (at 310.515 295.9099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 310.515 298.4499 90)
@@ -9771,7 +9791,7 @@
   (symbol (lib_id "Device:D_Small") (at 307.975 328.93 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 5dd6f624-3466-44d8-9dec-5a0a56dc9d65)
-    (property "Reference" "D53" (id 0) (at 310.515 327.6599 90)
+    (property "Reference" "D54" (id 0) (at 310.515 327.6599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 310.515 330.1999 90)
@@ -9796,7 +9816,7 @@
   (symbol (lib_id "Device:D_Small") (at 333.375 233.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid ce1f6e23-e1ac-41c6-8150-6b7e7496b68a)
-    (property "Reference" "D9" (id 0) (at 335.915 232.4099 90)
+    (property "Reference" "D10" (id 0) (at 335.915 232.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 335.915 234.9499 90)
@@ -9821,7 +9841,7 @@
   (symbol (lib_id "Device:D_Small") (at 333.375 265.43 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 82de99a1-b1a4-4ba9-95f0-6b2d243e3f30)
-    (property "Reference" "D24" (id 0) (at 335.915 264.1599 90)
+    (property "Reference" "D25" (id 0) (at 335.915 264.1599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 335.915 266.6999 90)
@@ -9846,7 +9866,7 @@
   (symbol (lib_id "Device:D_Small") (at 333.375 297.18 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 9b5cf202-617a-4980-a9ae-34c5e7cd62f7)
-    (property "Reference" "D39" (id 0) (at 335.915 295.9099 90)
+    (property "Reference" "D40" (id 0) (at 335.915 295.9099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 335.915 298.4499 90)
@@ -9871,7 +9891,7 @@
   (symbol (lib_id "Device:D_Small") (at 333.375 328.93 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid b7728f02-790d-4600-b998-3ebaff0b868d)
-    (property "Reference" "D54" (id 0) (at 335.915 327.6599 90)
+    (property "Reference" "D55" (id 0) (at 335.915 327.6599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 335.915 330.1999 90)
@@ -9896,7 +9916,7 @@
   (symbol (lib_id "Device:D_Small") (at 358.775 233.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 48b137e0-700e-450e-9edf-ec5d28d6f6ef)
-    (property "Reference" "D10" (id 0) (at 361.315 232.4099 90)
+    (property "Reference" "D11" (id 0) (at 361.315 232.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 361.315 234.9499 90)
@@ -9921,7 +9941,7 @@
   (symbol (lib_id "Device:D_Small") (at 358.775 265.43 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid e157a67f-ee72-4532-97a9-abd00dd8a5e5)
-    (property "Reference" "D25" (id 0) (at 361.315 264.1599 90)
+    (property "Reference" "D26" (id 0) (at 361.315 264.1599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 361.315 266.6999 90)
@@ -9946,7 +9966,7 @@
   (symbol (lib_id "Device:D_Small") (at 358.775 297.18 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid eb369774-0ddd-4a38-a61b-037315155c19)
-    (property "Reference" "D40" (id 0) (at 361.315 295.9099 90)
+    (property "Reference" "D41" (id 0) (at 361.315 295.9099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 361.315 298.4499 90)
@@ -9971,7 +9991,7 @@
   (symbol (lib_id "Device:D_Small") (at 358.775 328.93 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid a93da767-1fa4-414f-ae90-1959b0e73d4b)
-    (property "Reference" "D55" (id 0) (at 361.315 327.6599 90)
+    (property "Reference" "D56" (id 0) (at 361.315 327.6599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 361.315 330.1999 90)
@@ -9996,7 +10016,7 @@
   (symbol (lib_id "Device:D_Small") (at 384.175 233.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 24bf70eb-8ada-48b7-8fd0-3eccc0cc7129)
-    (property "Reference" "D11" (id 0) (at 386.715 232.4099 90)
+    (property "Reference" "D12" (id 0) (at 386.715 232.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 386.715 234.9499 90)
@@ -10021,7 +10041,7 @@
   (symbol (lib_id "Device:D_Small") (at 384.175 265.43 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid b89a0503-d3f3-4eb1-b203-c8143602b371)
-    (property "Reference" "D26" (id 0) (at 386.715 264.1599 90)
+    (property "Reference" "D27" (id 0) (at 386.715 264.1599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 386.715 266.6999 90)
@@ -10046,7 +10066,7 @@
   (symbol (lib_id "Device:D_Small") (at 384.175 297.18 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 2e2253f9-4dd8-4b2b-b41b-21d57dd23952)
-    (property "Reference" "D41" (id 0) (at 386.715 295.9099 90)
+    (property "Reference" "D42" (id 0) (at 386.715 295.9099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 386.715 298.4499 90)
@@ -10071,7 +10091,7 @@
   (symbol (lib_id "Device:D_Small") (at 384.175 328.93 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 657ad4d3-68e4-42bc-af85-5d36f437816c)
-    (property "Reference" "D56" (id 0) (at 386.715 327.6599 90)
+    (property "Reference" "D57" (id 0) (at 386.715 327.6599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 386.715 330.1999 90)
@@ -10096,7 +10116,7 @@
   (symbol (lib_id "Device:D_Small") (at 384.175 360.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 962d13da-d830-44b7-a77d-98725335bfa4)
-    (property "Reference" "D65" (id 0) (at 386.715 359.4099 90)
+    (property "Reference" "D66" (id 0) (at 386.715 359.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 386.715 361.9499 90)
@@ -10121,7 +10141,7 @@
   (symbol (lib_id "Device:D_Small") (at 409.575 233.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid b3294976-da16-4321-a608-9cc396977c44)
-    (property "Reference" "D12" (id 0) (at 412.115 232.4099 90)
+    (property "Reference" "D13" (id 0) (at 412.115 232.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 412.115 234.9499 90)
@@ -10146,7 +10166,7 @@
   (symbol (lib_id "Device:D_Small") (at 409.575 265.43 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid e5e71152-14df-464e-a3bd-a644fa74112b)
-    (property "Reference" "D27" (id 0) (at 412.115 264.1599 90)
+    (property "Reference" "D28" (id 0) (at 412.115 264.1599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 412.115 266.6999 90)
@@ -10171,7 +10191,7 @@
   (symbol (lib_id "Device:D_Small") (at 409.575 297.18 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid cbadcc1f-b19e-4fc4-9c9c-0914ff750356)
-    (property "Reference" "D42" (id 0) (at 412.115 295.9099 90)
+    (property "Reference" "D43" (id 0) (at 412.115 295.9099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 412.115 298.4499 90)
@@ -10196,7 +10216,7 @@
   (symbol (lib_id "Device:D_Small") (at 409.575 328.93 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 317091e7-844a-45dd-8f8e-d7f102a2725e)
-    (property "Reference" "D57" (id 0) (at 412.115 327.6599 90)
+    (property "Reference" "D58" (id 0) (at 412.115 327.6599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 412.115 330.1999 90)
@@ -10221,7 +10241,7 @@
   (symbol (lib_id "Device:D_Small") (at 409.575 360.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 23ecd8d3-08a3-478b-ae5d-9f87328e14f7)
-    (property "Reference" "D66" (id 0) (at 412.115 359.4099 90)
+    (property "Reference" "D67" (id 0) (at 412.115 359.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 412.115 361.9499 90)
@@ -10246,7 +10266,7 @@
   (symbol (lib_id "Device:D_Small") (at 434.975 233.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 61e1db13-ba78-46e8-8acc-5b07b98baed0)
-    (property "Reference" "D13" (id 0) (at 437.515 232.4099 90)
+    (property "Reference" "D14" (id 0) (at 437.515 232.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 437.515 234.9499 90)
@@ -10271,7 +10291,7 @@
   (symbol (lib_id "Device:D_Small") (at 434.975 265.43 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 4d7af091-2c68-45ee-9188-0afb3fdb1328)
-    (property "Reference" "D28" (id 0) (at 437.515 264.1599 90)
+    (property "Reference" "D29" (id 0) (at 437.515 264.1599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 437.515 266.6999 90)
@@ -10296,7 +10316,7 @@
   (symbol (lib_id "Device:D_Small") (at 434.975 297.18 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 27d72ea6-67c9-4b26-8367-9c66236cba43)
-    (property "Reference" "D43" (id 0) (at 437.515 295.9099 90)
+    (property "Reference" "D44" (id 0) (at 437.515 295.9099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 437.515 298.4499 90)
@@ -10321,7 +10341,7 @@
   (symbol (lib_id "Device:D_Small") (at 434.975 328.93 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid a3fb9dc3-f289-479b-b5c0-99930f84b48b)
-    (property "Reference" "D58" (id 0) (at 437.515 327.6599 90)
+    (property "Reference" "D59" (id 0) (at 437.515 327.6599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 437.515 330.1999 90)
@@ -10346,7 +10366,7 @@
   (symbol (lib_id "Device:D_Small") (at 434.975 360.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 93c97dd7-76a0-4266-b72b-6d07ba86f2c4)
-    (property "Reference" "D67" (id 0) (at 437.515 359.4099 90)
+    (property "Reference" "D68" (id 0) (at 437.515 359.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 437.515 361.9499 90)
@@ -10371,7 +10391,7 @@
   (symbol (lib_id "Device:D_Small") (at 460.375 233.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid bd7e09a9-e7ce-431d-b835-51d92ceb03dc)
-    (property "Reference" "D14" (id 0) (at 462.915 232.4099 90)
+    (property "Reference" "D15" (id 0) (at 462.915 232.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 462.915 234.9499 90)
@@ -10396,7 +10416,7 @@
   (symbol (lib_id "Device:D_Small") (at 460.375 265.43 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid df805b9e-4a04-4dec-b983-af14a975c209)
-    (property "Reference" "D29" (id 0) (at 462.915 264.1599 90)
+    (property "Reference" "D30" (id 0) (at 462.915 264.1599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 462.915 266.6999 90)
@@ -10421,7 +10441,7 @@
   (symbol (lib_id "Device:D_Small") (at 460.375 297.18 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid eebea425-1058-4018-aa7b-d483dc2f07ac)
-    (property "Reference" "D44" (id 0) (at 462.915 295.9099 90)
+    (property "Reference" "D45" (id 0) (at 462.915 295.9099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 462.915 298.4499 90)
@@ -10446,7 +10466,7 @@
   (symbol (lib_id "Device:D_Small") (at 460.375 328.93 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 6e16be02-469f-4acd-9358-d1e8bcd32ea7)
-    (property "Reference" "D59" (id 0) (at 462.915 327.6599 90)
+    (property "Reference" "D60" (id 0) (at 462.915 327.6599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 462.915 330.1999 90)
@@ -10471,7 +10491,7 @@
   (symbol (lib_id "Device:D_Small") (at 460.375 360.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 40edbf66-05de-4fdb-be8e-8a3fb71ad2ab)
-    (property "Reference" "D68" (id 0) (at 462.915 359.4099 90)
+    (property "Reference" "D69" (id 0) (at 462.915 359.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 462.915 361.9499 90)
@@ -10496,7 +10516,7 @@
   (symbol (lib_id "Device:D_Small") (at 485.775 233.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 3ad426fb-629a-470a-8413-8fc80a072683)
-    (property "Reference" "D15" (id 0) (at 488.315 232.4099 90)
+    (property "Reference" "D16" (id 0) (at 488.315 232.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 488.315 234.9499 90)
@@ -10521,7 +10541,7 @@
   (symbol (lib_id "Device:D_Small") (at 485.775 265.43 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid b0e6cfaf-06a1-4c2a-91b3-57e8484c0865)
-    (property "Reference" "D30" (id 0) (at 488.315 264.1599 90)
+    (property "Reference" "D31" (id 0) (at 488.315 264.1599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 488.315 266.6999 90)
@@ -10546,7 +10566,7 @@
   (symbol (lib_id "Device:D_Small") (at 485.775 297.18 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 48ffa66f-ed81-4ed5-8f49-358043bc16f2)
-    (property "Reference" "D45" (id 0) (at 488.315 295.9099 90)
+    (property "Reference" "D46" (id 0) (at 488.315 295.9099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 488.315 298.4499 90)
@@ -10571,7 +10591,7 @@
   (symbol (lib_id "Device:D_Small") (at 485.775 328.93 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid d7bc5282-62e3-416c-9f51-076fa8615526)
-    (property "Reference" "D60" (id 0) (at 488.315 327.6599 90)
+    (property "Reference" "D61" (id 0) (at 488.315 327.6599 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 488.315 330.1999 90)
@@ -10596,7 +10616,7 @@
   (symbol (lib_id "Device:D_Small") (at 485.775 360.68 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid aa4642c2-3a96-4d37-af52-1c909ccd63d5)
-    (property "Reference" "D69" (id 0) (at 488.315 359.4099 90)
+    (property "Reference" "D70" (id 0) (at 488.315 359.4099 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1N4148W" (id 1) (at 488.315 361.9499 90)
@@ -10670,6 +10690,23 @@
     )
   )
 
+  (symbol (lib_id "Mechanical:MountingHole") (at 777.24 394.335 0) (unit 1)
+    (in_bom no) (on_board yes) (fields_autoplaced)
+    (uuid 6a69b8e8-d262-4e55-a769-b257da79f57b)
+    (property "Reference" "GR3" (id 0) (at 781.05 393.0649 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "Lok65 label" (id 1) (at 781.05 395.6049 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "loki65_lib:loki65_label" (id 2) (at 777.24 394.335 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (id 3) (at 777.24 394.335 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
   (symbol (lib_id "Mechanical:MountingHole") (at 777.875 376.555 0) (unit 1)
     (in_bom no) (on_board yes) (fields_autoplaced)
     (uuid 704351c7-7968-4562-b0ff-55fecfa51847)
@@ -10690,7 +10727,7 @@
   (symbol (lib_id "Device:C_Small") (at 61.595 45.72 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid dea96ffa-f040-44f2-9288-2280878ceaa6)
-    (property "Reference" "C1" (id 0) (at 61.595 41.275 90)
+    (property "Reference" "C3" (id 0) (at 61.595 41.275 90)
       (effects (font (size 0.762 0.762)))
     )
     (property "Value" "100n" (id 1) (at 61.595 42.545 90)
@@ -10712,7 +10749,7 @@
   (symbol (lib_id "Device:C_Small") (at 137.795 142.24 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid a2525e67-3c27-4302-a0a1-33c7fe2d0219)
-    (property "Reference" "C8" (id 0) (at 133.985 142.24 90)
+    (property "Reference" "C13" (id 0) (at 133.985 142.24 90)
       (effects (font (size 0.7874 0.7874)))
     )
     (property "Value" "16p" (id 1) (at 135.255 142.24 90)
@@ -10737,7 +10774,7 @@
   (symbol (lib_id "Device:C_Small") (at 150.495 142.24 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid a06543b8-a8d4-4924-85d0-c37f94a0f619)
-    (property "Reference" "C9" (id 0) (at 154.305 142.24 90)
+    (property "Reference" "C14" (id 0) (at 154.305 142.24 90)
       (effects (font (size 0.7874 0.7874)))
     )
     (property "Value" "16p" (id 1) (at 153.035 142.24 90)
@@ -10762,7 +10799,7 @@
   (symbol (lib_id "Device:C_Small") (at 191.135 108.585 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid a8a60c15-5fae-4b8f-b4e1-c63e14b959bb)
-    (property "Reference" "C6" (id 0) (at 191.135 101.6 0)
+    (property "Reference" "C9" (id 0) (at 191.135 101.6 0)
       (effects (font (size 0.762 0.762)))
     )
     (property "Value" "1u" (id 1) (at 191.135 102.87 0)
@@ -10787,7 +10824,7 @@
   (symbol (lib_id "Device:C_Small") (at 198.755 108.585 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 74c34d78-9dac-4a55-9726-8706d257602c)
-    (property "Reference" "C7" (id 0) (at 198.755 101.6 0)
+    (property "Reference" "C10" (id 0) (at 198.755 101.6 0)
       (effects (font (size 0.762 0.762)))
     )
     (property "Value" "10n" (id 1) (at 198.755 102.87 0)
@@ -10812,7 +10849,7 @@
   (symbol (lib_id "Device:C_Small") (at 200.025 56.515 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 64ba220f-184b-460a-8095-3b0147098bd8)
-    (property "Reference" "C3" (id 0) (at 198.12 55.88 0)
+    (property "Reference" "C5" (id 0) (at 198.12 55.88 0)
       (effects (font (size 0.762 0.762)) (justify left))
     )
     (property "Value" "100n" (id 1) (at 198.12 57.15 0)
@@ -10837,7 +10874,7 @@
   (symbol (lib_id "Device:C_Small") (at 213.36 50.8 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 65eb09f4-2ab6-44bc-b56c-63db1d7f56c7)
-    (property "Reference" "C2" (id 0) (at 213.36 45.72 90)
+    (property "Reference" "C4" (id 0) (at 213.36 45.72 90)
       (effects (font (size 0.762 0.762)))
     )
     (property "Value" "100n" (id 1) (at 213.36 46.99 90)
@@ -10862,7 +10899,7 @@
   (symbol (lib_id "Device:C_Small") (at 267.335 144.145 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 7984f09e-521a-4220-a0a8-1093ecf09458)
-    (property "Reference" "C11" (id 0) (at 269.875 143.51 0)
+    (property "Reference" "C16" (id 0) (at 269.875 143.51 0)
       (effects (font (size 0.7874 0.7874)) (justify right))
     )
     (property "Value" "2.2u" (id 1) (at 269.875 144.78 0)
@@ -10887,7 +10924,7 @@
   (symbol (lib_id "Device:C_Small") (at 276.86 142.875 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid c25a1462-f7ad-4ba5-b41d-857183aea689)
-    (property "Reference" "C10" (id 0) (at 281.305 141.605 90)
+    (property "Reference" "C15" (id 0) (at 281.305 141.605 90)
       (effects (font (size 0.762 0.762)) (justify right))
     )
     (property "Value" "100n" (id 1) (at 281.305 142.875 90)
@@ -10912,7 +10949,7 @@
   (symbol (lib_id "Device:C_Small") (at 276.86 149.86 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid a3c49907-1623-4eae-ab23-7da92964f2f3)
-    (property "Reference" "C12" (id 0) (at 281.305 147.955 90)
+    (property "Reference" "C17" (id 0) (at 281.305 147.955 90)
       (effects (font (size 0.762 0.762)) (justify right))
     )
     (property "Value" "4.7u" (id 1) (at 281.305 149.225 90)
@@ -10937,7 +10974,7 @@
   (symbol (lib_id "Device:C_Small") (at 291.465 65.405 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 5f87e742-3483-47d1-93d6-32953b491d31)
-    (property "Reference" "C4" (id 0) (at 291.465 58.42 0)
+    (property "Reference" "C6" (id 0) (at 291.465 58.42 0)
       (effects (font (size 0.762 0.762)))
     )
     (property "Value" "100n" (id 1) (at 291.465 59.69 0)
@@ -10962,7 +10999,7 @@
   (symbol (lib_id "Device:C_Small") (at 298.45 65.405 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 3678860b-fef6-4f94-b2ff-af29abad75a7)
-    (property "Reference" "C5" (id 0) (at 298.45 58.42 0)
+    (property "Reference" "C7" (id 0) (at 298.45 58.42 0)
       (effects (font (size 0.762 0.762)))
     )
     (property "Value" "4.7u" (id 1) (at 298.45 59.69 0)
@@ -10987,7 +11024,7 @@
   (symbol (lib_id "Device:C_Small") (at 477.52 97.79 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 5c99615a-bbdf-4d9d-b476-0b21565c31d2)
-    (property "Reference" "C13" (id 0) (at 480.822 98.298 0)
+    (property "Reference" "C8" (id 0) (at 480.822 98.298 0)
       (effects (font (size 0.762 0.762)))
     )
     (property "Value" "100n" (id 1) (at 481.33 96.774 0)
@@ -11012,7 +11049,7 @@
   (symbol (lib_id "Device:R") (at 744.855 135.89 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 3c0cafbd-8b69-44fd-aad8-83e3fd3821c6)
-    (property "Reference" "R11" (id 0) (at 746.76 135.89 0)
+    (property "Reference" "R10" (id 0) (at 746.76 135.89 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100k" (id 1) (at 744.855 135.89 90)
@@ -11034,7 +11071,7 @@
   (symbol (lib_id "Device:R") (at 765.175 135.89 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 85343638-68cc-4d71-b327-dee80538d788)
-    (property "Reference" "R12" (id 0) (at 767.08 135.89 0)
+    (property "Reference" "R11" (id 0) (at 767.08 135.89 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100k" (id 1) (at 765.175 135.89 90)
@@ -11093,7 +11130,7 @@
   (symbol (lib_id "Device:D_Schottky") (at 756.285 118.745 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 6ac24fbc-988f-4518-908e-6f80d88532a3)
-    (property "Reference" "D70" (id 0) (at 756.285 112.395 0))
+    (property "Reference" "D1" (id 0) (at 756.285 112.395 0))
     (property "Value" "RB060M-60TR" (id 1) (at 756.285 114.935 0))
     (property "Footprint" "acheron_Components:D_SOD-123" (id 2) (at 756.285 118.745 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -11126,7 +11163,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 464.82 93.345 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 0ae9064a-1937-49a6-83de-ba5a683dd5e9)
-    (property "Reference" "SW80" (id 0) (at 465.455 86.995 0))
+    (property "Reference" "SW2" (id 0) (at 465.455 86.995 0))
     (property "Value" "K2-1187SQ-A4SW-06" (id 1) (at 465.455 89.535 0))
     (property "Footprint" "acheron_Hardware:K2-1187SQ-A4SW-06" (id 2) (at 464.82 93.345 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -11965,7 +12002,7 @@
   (symbol (lib_id "Device:CP1") (at 738.505 135.255 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 5058a176-c221-4264-98cb-eb7cb0edd422)
-    (property "Reference" "C16" (id 0) (at 734.695 133.35 0)
+    (property "Reference" "C11" (id 0) (at 734.695 133.35 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1u" (id 1) (at 734.695 135.255 0)
@@ -11990,7 +12027,7 @@
   (symbol (lib_id "Device:C") (at 756.92 38.735 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 1350a921-0401-43e5-93cb-d246ce42872b)
-    (property "Reference" "C14" (id 0) (at 756.92 33.655 90)
+    (property "Reference" "C1" (id 0) (at 756.92 33.655 90)
       (effects (font (size 0.762 0.762)))
     )
     (property "Value" "100n" (id 1) (at 756.92 34.925 90)
@@ -12021,7 +12058,7 @@
   (symbol (lib_id "Device:CP1") (at 774.065 135.255 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 51efe9a4-2b16-4791-bfc0-1c249dc92509)
-    (property "Reference" "C17" (id 0) (at 777.24 133.35 0)
+    (property "Reference" "C12" (id 0) (at 777.24 133.35 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "1u" (id 1) (at 777.24 135.255 0)
@@ -12046,7 +12083,7 @@
   (symbol (lib_id "Device:C") (at 774.7 38.735 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 95ea561b-34d7-4e96-abaa-38dad6786a7c)
-    (property "Reference" "C15" (id 0) (at 774.7 33.655 90)
+    (property "Reference" "C2" (id 0) (at 774.7 33.655 90)
       (effects (font (size 0.762 0.762)))
     )
     (property "Value" "100n" (id 1) (at 774.7 34.925 90)
@@ -12115,7 +12152,7 @@
   (symbol (lib_id "Switch:SW_SPDT") (at 459.74 71.12 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 7346d95f-a5f0-4a3a-baf4-6dcb0e1c08e7)
-    (property "Reference" "SW79" (id 0) (at 459.74 63.5 0))
+    (property "Reference" "SW1" (id 0) (at 459.74 63.5 0))
     (property "Value" "SSAL220100" (id 1) (at 459.74 66.04 0))
     (property "Footprint" "acheron_Components:SSAL220100" (id 2) (at 459.74 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -12215,32 +12252,6 @@
     (pin "3" (uuid 10962dda-6fa1-43c6-a74d-5712ea0723a7))
   )
 
-  (symbol (lib_id "Connector_Generic:Conn_01x09") (at 374.015 88.9 0) (unit 1)
-    (in_bom no) (on_board yes) (fields_autoplaced)
-    (uuid 8e51d0fb-9a13-4355-99de-cc137978489b)
-    (property "Reference" "J1" (id 0) (at 377.19 87.6299 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "EXTRA_PINS" (id 1) (at 377.19 90.1699 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "acheron_Connectors:PinHeader_1x9_P2.54mm_Vertical" (id 2) (at 374.015 88.9 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (id 3) (at 374.015 88.9 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 1e085570-783d-4058-8b0e-e95264b0a5b1))
-    (pin "2" (uuid 6cef4faf-de04-43c4-978f-fadafc9167b2))
-    (pin "3" (uuid f49eb0f0-ec95-4189-a9f8-082287ce9428))
-    (pin "4" (uuid 2eaa0489-6e56-42a8-9dc3-7771e415c536))
-    (pin "5" (uuid 3e6b4850-a209-43a8-bd2d-b499953a06b6))
-    (pin "6" (uuid 348916fd-94a7-4f4d-bed4-c454e5123b2a))
-    (pin "7" (uuid 161ab758-d14a-46bb-ad93-2426c19b9482))
-    (pin "8" (uuid 36422bc4-b0e6-4806-808f-7cdad32b0cfe))
-    (pin "9" (uuid ce7ee249-a5c8-438f-aa11-edaafb3ddc62))
-  )
-
   (symbol (lib_id "Connector_Generic:Conn_02x05_Odd_Even") (at 143.51 57.15 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 032032eb-92c3-41ea-9bf9-bc6cc0e547d6)
@@ -12265,6 +12276,33 @@
     (pin "7" (uuid fda2c375-8219-4d89-b641-dfff7db54907))
     (pin "8" (uuid ea74fbc5-56d3-4957-95cc-85502a745e8f))
     (pin "9" (uuid 9825fc9e-54a9-441b-a51b-cd2d86038801))
+  )
+
+  (symbol (lib_id "Connector_Generic:Conn_01x10") (at 374.015 86.36 0) (unit 1)
+    (in_bom yes) (on_board yes) (fields_autoplaced)
+    (uuid 8e51d0fb-9a13-4355-99de-cc137978489b)
+    (property "Reference" "J1" (id 0) (at 377.19 85.0899 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "EXTRA_PINS" (id 1) (at 377.19 87.6299 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "acheron_Connectors:PinHeader_1x10_P2.54mm_Vertical" (id 2) (at 374.015 86.36 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (id 3) (at 374.015 86.36 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 1e085570-783d-4058-8b0e-e95264b0a5b1))
+    (pin "10" (uuid bc8630db-67ea-4197-be36-d6f3b68e9d35))
+    (pin "2" (uuid 6cef4faf-de04-43c4-978f-fadafc9167b2))
+    (pin "3" (uuid f49eb0f0-ec95-4189-a9f8-082287ce9428))
+    (pin "4" (uuid 2eaa0489-6e56-42a8-9dc3-7771e415c536))
+    (pin "5" (uuid 3e6b4850-a209-43a8-bd2d-b499953a06b6))
+    (pin "6" (uuid 348916fd-94a7-4f4d-bed4-c454e5123b2a))
+    (pin "7" (uuid 161ab758-d14a-46bb-ad93-2426c19b9482))
+    (pin "8" (uuid 36422bc4-b0e6-4806-808f-7cdad32b0cfe))
+    (pin "9" (uuid ce7ee249-a5c8-438f-aa11-edaafb3ddc62))
   )
 
   (symbol (lib_id "acheron_Symbols:WS2812B-2020") (at 125.73 463.55 0) (unit 1)
@@ -12312,7 +12350,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 130.175 247.65 90) (mirror x) (unit 1)
     (in_bom no) (on_board yes)
     (uuid f411fa35-9fbb-479e-91c5-1ddecf7270d8)
-    (property "Reference" "SW1" (id 0) (at 128.905 247.65 0))
+    (property "Reference" "SW3" (id 0) (at 128.905 247.65 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 133.985 247.65 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12332,7 +12370,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 130.175 279.4 90) (mirror x) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 5e69f139-ba75-4ab7-b0f5-3742ddb464b8)
-    (property "Reference" "SW17" (id 0) (at 128.905 279.4 0))
+    (property "Reference" "SW19" (id 0) (at 128.905 279.4 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 133.985 279.4 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12352,7 +12390,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 130.175 311.15 90) (mirror x) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 117cf674-234f-4643-9183-52bf4fa7f7c1)
-    (property "Reference" "SW32" (id 0) (at 128.905 311.15 0))
+    (property "Reference" "SW34" (id 0) (at 128.905 311.15 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 133.985 311.15 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12372,7 +12410,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 130.175 342.9 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 529daeb4-300a-41b4-883e-bd74fa941c71)
-    (property "Reference" "SW49" (id 0) (at 130.175 341.63 0))
+    (property "Reference" "SW51" (id 0) (at 130.175 341.63 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 130.175 346.71 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12392,7 +12430,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 130.175 374.65 90) (mirror x) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 78330708-ef2c-4029-bc0a-a87c59bf6e27)
-    (property "Reference" "SW65" (id 0) (at 128.905 374.65 0))
+    (property "Reference" "SW67" (id 0) (at 128.905 374.65 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 133.985 374.65 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12412,7 +12450,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 131.445 312.42 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 930e9d77-bbdf-47df-9aa4-53739ebfe52b)
-    (property "Reference" "SW47" (id 0) (at 131.445 311.15 0))
+    (property "Reference" "SW49" (id 0) (at 131.445 311.15 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 131.445 316.23 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12432,7 +12470,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 131.445 344.17 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 60c03b8a-93ff-40a5-9432-162d33d49688)
-    (property "Reference" "SW64" (id 0) (at 131.445 342.9 0))
+    (property "Reference" "SW66" (id 0) (at 131.445 342.9 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 131.445 347.98 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12452,7 +12490,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 131.445 375.92 90) (mirror x) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 1adf300e-8bd2-4f4c-92ce-23f52edc906d)
-    (property "Reference" "SW74" (id 0) (at 130.175 375.92 0))
+    (property "Reference" "SW76" (id 0) (at 130.175 375.92 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 135.255 375.92 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12472,7 +12510,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 155.575 247.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 160ae1a9-f7e9-4dd9-bdbd-a38aa5aab021)
-    (property "Reference" "SW2" (id 0) (at 155.575 246.38 0))
+    (property "Reference" "SW4" (id 0) (at 155.575 246.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 155.575 251.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12492,7 +12530,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 155.575 279.4 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid b10e0334-7479-44e7-829c-83f4218496ad)
-    (property "Reference" "SW18" (id 0) (at 155.575 278.13 0))
+    (property "Reference" "SW20" (id 0) (at 155.575 278.13 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 155.575 283.21 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12512,7 +12550,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 155.575 311.15 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 41f10f3f-18d4-4098-89c4-1109e611bb04)
-    (property "Reference" "SW33" (id 0) (at 155.575 309.88 0))
+    (property "Reference" "SW35" (id 0) (at 155.575 309.88 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 155.575 314.96 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12532,7 +12570,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 155.575 342.9 90) (mirror x) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 8ec203b0-bf98-4f5b-95af-c557bad2673a)
-    (property "Reference" "SW50" (id 0) (at 154.305 342.9 0))
+    (property "Reference" "SW52" (id 0) (at 154.305 342.9 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 159.385 342.9 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12552,7 +12590,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 155.575 374.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 594ae9ee-f6f0-492b-adad-f72051da2f55)
-    (property "Reference" "SW66" (id 0) (at 155.575 373.38 0))
+    (property "Reference" "SW68" (id 0) (at 155.575 373.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 155.575 378.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12572,7 +12610,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 156.845 375.92 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 5a6dad5e-3a50-4980-9add-09a3d73da39b)
-    (property "Reference" "SW75" (id 0) (at 156.845 374.65 0))
+    (property "Reference" "SW77" (id 0) (at 156.845 374.65 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 156.845 379.73 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12634,7 +12672,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 180.975 247.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 474905c5-e3a5-40a0-a57d-e5613c2c4e3e)
-    (property "Reference" "SW3" (id 0) (at 180.975 246.38 0))
+    (property "Reference" "SW5" (id 0) (at 180.975 246.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 180.975 251.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12654,7 +12692,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 180.975 279.4 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 39e4a37d-1ad7-4389-9493-a737c29637f3)
-    (property "Reference" "SW19" (id 0) (at 180.975 278.13 0))
+    (property "Reference" "SW21" (id 0) (at 180.975 278.13 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 180.975 283.21 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12674,7 +12712,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 180.975 311.15 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 8fa925d1-fe14-414b-9f6a-1dd4425705c6)
-    (property "Reference" "SW34" (id 0) (at 180.975 309.88 0))
+    (property "Reference" "SW36" (id 0) (at 180.975 309.88 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 180.975 314.96 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12694,7 +12732,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 180.975 342.9 90) (mirror x) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 3885bed2-f3dd-4f73-b60c-a349fb566e34)
-    (property "Reference" "SW51" (id 0) (at 179.705 342.9 0))
+    (property "Reference" "SW53" (id 0) (at 179.705 342.9 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 184.785 342.9 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12714,7 +12752,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 180.975 374.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid fa0db928-6fc4-43b4-9811-54302c3c7c55)
-    (property "Reference" "SW67" (id 0) (at 180.975 373.38 0))
+    (property "Reference" "SW69" (id 0) (at 180.975 373.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 180.975 378.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12734,7 +12772,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 182.245 375.92 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid b3530da8-d23c-4bd7-974d-0efd6fe8c91d)
-    (property "Reference" "SW76" (id 0) (at 182.245 374.65 0))
+    (property "Reference" "SW78" (id 0) (at 182.245 374.65 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 182.245 379.73 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12796,7 +12834,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 206.375 247.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 35f77adf-4360-4ae3-aaf4-6e0e8746251c)
-    (property "Reference" "SW4" (id 0) (at 206.375 246.38 0))
+    (property "Reference" "SW6" (id 0) (at 206.375 246.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 206.375 251.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12816,7 +12854,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 206.375 279.4 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 8222fd69-8ea5-4af8-aff5-1820df17006c)
-    (property "Reference" "SW20" (id 0) (at 206.375 278.13 0))
+    (property "Reference" "SW22" (id 0) (at 206.375 278.13 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 206.375 283.21 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12836,7 +12874,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 206.375 311.15 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid f2628a35-9cd7-4f64-a12d-65ea5990ad55)
-    (property "Reference" "SW35" (id 0) (at 206.375 309.88 0))
+    (property "Reference" "SW37" (id 0) (at 206.375 309.88 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 206.375 314.96 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12856,7 +12894,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 206.375 342.9 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 0598c7ed-182a-4423-be67-64c948d61ee8)
-    (property "Reference" "SW52" (id 0) (at 206.375 341.63 0))
+    (property "Reference" "SW54" (id 0) (at 206.375 341.63 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 206.375 346.71 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12876,7 +12914,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 231.775 247.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 12540b2f-d2ed-4eb4-a578-c19fbd5a5055)
-    (property "Reference" "SW5" (id 0) (at 231.775 246.38 0))
+    (property "Reference" "SW7" (id 0) (at 231.775 246.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 231.775 251.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12896,7 +12934,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 231.775 279.4 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 93586bb3-5890-42d5-ac77-28a066a607fa)
-    (property "Reference" "SW21" (id 0) (at 231.775 278.13 0))
+    (property "Reference" "SW23" (id 0) (at 231.775 278.13 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 231.775 283.21 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12916,7 +12954,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 231.775 311.15 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 108e09e3-8c15-42e1-8701-1874c776cd86)
-    (property "Reference" "SW36" (id 0) (at 231.775 309.88 0))
+    (property "Reference" "SW38" (id 0) (at 231.775 309.88 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 231.775 314.96 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12936,7 +12974,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 231.775 342.9 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid e01ca30e-df4e-4496-9efa-53e7402f3097)
-    (property "Reference" "SW53" (id 0) (at 231.775 341.63 0))
+    (property "Reference" "SW55" (id 0) (at 231.775 341.63 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 231.775 346.71 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -12998,7 +13036,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 257.175 247.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid d855bf2f-154f-4428-b39e-57fd23bde81b)
-    (property "Reference" "SW6" (id 0) (at 257.175 246.38 0))
+    (property "Reference" "SW8" (id 0) (at 257.175 246.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 257.175 251.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13018,7 +13056,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 257.175 279.4 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid b88eb162-b970-4d59-bae9-488fbaad9caa)
-    (property "Reference" "SW22" (id 0) (at 257.175 278.13 0))
+    (property "Reference" "SW24" (id 0) (at 257.175 278.13 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 257.175 283.21 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13038,7 +13076,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 257.175 311.15 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 49fd5461-1813-4fe8-bf77-c9c33814977f)
-    (property "Reference" "SW37" (id 0) (at 257.175 309.88 0))
+    (property "Reference" "SW39" (id 0) (at 257.175 309.88 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 257.175 314.96 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13058,7 +13096,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 257.175 342.9 90) (mirror x) (unit 1)
     (in_bom no) (on_board yes)
     (uuid f9d4ed97-f43e-4725-887e-b687c33981c1)
-    (property "Reference" "SW54" (id 0) (at 255.905 342.9 0))
+    (property "Reference" "SW56" (id 0) (at 255.905 342.9 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 260.985 342.9 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13120,7 +13158,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 282.575 247.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 145a3c0e-bf60-4c8c-8d73-ff14fe41fcad)
-    (property "Reference" "SW7" (id 0) (at 282.575 246.38 0))
+    (property "Reference" "SW9" (id 0) (at 282.575 246.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 282.575 251.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13140,7 +13178,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 282.575 279.4 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 29a14934-86fc-4379-b872-f4c166f5d776)
-    (property "Reference" "SW23" (id 0) (at 282.575 278.13 0))
+    (property "Reference" "SW25" (id 0) (at 282.575 278.13 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 282.575 283.21 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13160,7 +13198,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 282.575 311.15 90) (mirror x) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 8deee1b7-b67c-4dbe-888b-0d361e1c8aed)
-    (property "Reference" "SW38" (id 0) (at 281.305 311.15 0))
+    (property "Reference" "SW40" (id 0) (at 281.305 311.15 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 286.385 311.15 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13180,7 +13218,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 282.575 342.9 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 039f5e4a-18bb-4994-91c5-88843ec1b9f6)
-    (property "Reference" "SW55" (id 0) (at 282.575 341.63 0))
+    (property "Reference" "SW57" (id 0) (at 282.575 341.63 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 282.575 346.71 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13200,7 +13238,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 282.575 374.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 57377531-cadb-4f76-b290-3061cff503ce)
-    (property "Reference" "SW68" (id 0) (at 282.575 373.38 0))
+    (property "Reference" "SW70" (id 0) (at 282.575 373.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 282.575 378.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13220,7 +13258,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 283.845 375.92 90) (mirror x) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 6ec020ab-35a7-48fc-81e0-91b7db056a9b)
-    (property "Reference" "SW77" (id 0) (at 282.575 375.92 0))
+    (property "Reference" "SW79" (id 0) (at 282.575 375.92 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 287.655 375.92 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13240,7 +13278,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 307.975 247.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 0d1e10e2-6ec2-4059-a30f-53992d70dd47)
-    (property "Reference" "SW8" (id 0) (at 307.975 246.38 0))
+    (property "Reference" "SW10" (id 0) (at 307.975 246.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 307.975 251.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13260,7 +13298,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 307.975 279.4 90) (mirror x) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 50cdb11d-761e-4c4f-9001-8209797f51d0)
-    (property "Reference" "SW24" (id 0) (at 306.705 279.4 0))
+    (property "Reference" "SW26" (id 0) (at 306.705 279.4 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 311.785 279.4 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13280,7 +13318,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 307.975 311.15 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 959938d3-af2b-40cf-9476-36ffd91ae77d)
-    (property "Reference" "SW39" (id 0) (at 307.975 309.88 0))
+    (property "Reference" "SW41" (id 0) (at 307.975 309.88 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 307.975 314.96 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13300,7 +13338,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 307.975 342.9 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid bdcffe3a-4b4c-4553-819d-68b3c9381883)
-    (property "Reference" "SW56" (id 0) (at 307.975 341.63 0))
+    (property "Reference" "SW58" (id 0) (at 307.975 341.63 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 307.975 346.71 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13362,7 +13400,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 333.375 247.65 90) (mirror x) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 5dc20fdb-589b-40a3-a16c-ff7f1091a000)
-    (property "Reference" "SW9" (id 0) (at 332.105 247.65 0))
+    (property "Reference" "SW11" (id 0) (at 332.105 247.65 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 337.185 247.65 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13382,7 +13420,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 333.375 279.4 90) (mirror x) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 73eeaeb0-c2cc-4071-bd56-019ac735adda)
-    (property "Reference" "SW25" (id 0) (at 332.105 279.4 0))
+    (property "Reference" "SW27" (id 0) (at 332.105 279.4 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 337.185 279.4 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13402,7 +13440,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 333.375 311.15 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 8a819168-591b-4729-94c9-681c1ed64890)
-    (property "Reference" "SW40" (id 0) (at 333.375 309.88 0))
+    (property "Reference" "SW42" (id 0) (at 333.375 309.88 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 333.375 314.96 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13422,7 +13460,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 333.375 342.9 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 2111f85d-641d-40af-9c81-edd10e0edff5)
-    (property "Reference" "SW57" (id 0) (at 333.375 341.63 0))
+    (property "Reference" "SW59" (id 0) (at 333.375 341.63 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 333.375 346.71 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13484,7 +13522,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 358.775 247.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid f154cc56-1f67-49c0-a67a-622721c07da7)
-    (property "Reference" "SW10" (id 0) (at 358.775 246.38 0))
+    (property "Reference" "SW12" (id 0) (at 358.775 246.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 358.775 251.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13504,7 +13542,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 358.775 279.4 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 083dc6f7-e3fd-4d74-82b4-a7c3e54b2b81)
-    (property "Reference" "SW26" (id 0) (at 358.775 278.13 0))
+    (property "Reference" "SW28" (id 0) (at 358.775 278.13 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 358.775 283.21 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13524,7 +13562,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 358.775 311.15 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid e6ba0db0-5d5c-49eb-b9f4-6fc679c5e85b)
-    (property "Reference" "SW41" (id 0) (at 358.775 309.88 0))
+    (property "Reference" "SW43" (id 0) (at 358.775 309.88 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 358.775 314.96 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13544,7 +13582,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 358.775 342.9 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 77c98ba5-0a9f-41d6-afcb-11c05e22554b)
-    (property "Reference" "SW58" (id 0) (at 358.775 341.63 0))
+    (property "Reference" "SW60" (id 0) (at 358.775 341.63 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 358.775 346.71 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13564,7 +13602,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 384.175 247.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 5272d95b-484e-4208-955e-9ac9e1f6fbd8)
-    (property "Reference" "SW11" (id 0) (at 384.175 246.38 0))
+    (property "Reference" "SW13" (id 0) (at 384.175 246.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 384.175 251.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13584,7 +13622,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 384.175 279.4 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid b7da36dc-d69b-4ea0-8ceb-3d6f5b85951c)
-    (property "Reference" "SW27" (id 0) (at 384.175 278.13 0))
+    (property "Reference" "SW29" (id 0) (at 384.175 278.13 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 384.175 283.21 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13604,7 +13642,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 384.175 311.15 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 0d205099-2550-4f04-ba30-28f91c312f0d)
-    (property "Reference" "SW42" (id 0) (at 384.175 309.88 0))
+    (property "Reference" "SW44" (id 0) (at 384.175 309.88 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 384.175 314.96 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13624,7 +13662,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 384.175 342.9 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid f85545ac-4de9-40a7-b117-b61ec073ba1c)
-    (property "Reference" "SW59" (id 0) (at 384.175 341.63 0))
+    (property "Reference" "SW61" (id 0) (at 384.175 341.63 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 384.175 346.71 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13644,7 +13682,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 384.175 374.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 9f03e615-8de1-4e2c-be94-40fe02af9632)
-    (property "Reference" "SW69" (id 0) (at 384.175 373.38 0))
+    (property "Reference" "SW71" (id 0) (at 384.175 373.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 384.175 378.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13706,7 +13744,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 409.575 247.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 2ff44b1c-e1bb-473c-bf41-e349021da113)
-    (property "Reference" "SW12" (id 0) (at 409.575 246.38 0))
+    (property "Reference" "SW14" (id 0) (at 409.575 246.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 409.575 251.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13726,7 +13764,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 409.575 279.4 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 46b14967-fea8-4bbb-914a-c3a4ce1223ad)
-    (property "Reference" "SW28" (id 0) (at 409.575 278.13 0))
+    (property "Reference" "SW30" (id 0) (at 409.575 278.13 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 409.575 283.21 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13746,7 +13784,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 409.575 311.15 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid dd4b7f4e-af9f-4866-a7e8-59d3e3209078)
-    (property "Reference" "SW43" (id 0) (at 409.575 309.88 0))
+    (property "Reference" "SW45" (id 0) (at 409.575 309.88 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 409.575 314.96 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13766,7 +13804,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 409.575 342.9 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 40c5ee92-aa20-40c3-b487-aefa77dddaca)
-    (property "Reference" "SW60" (id 0) (at 409.575 341.63 0))
+    (property "Reference" "SW62" (id 0) (at 409.575 341.63 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 409.575 346.71 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13786,7 +13824,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 409.575 374.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 41330181-43af-4c8c-bcbf-6309ab5ad48e)
-    (property "Reference" "SW70" (id 0) (at 409.575 373.38 0))
+    (property "Reference" "SW72" (id 0) (at 409.575 373.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 409.575 378.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13806,7 +13844,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 410.845 375.92 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid c53c883a-a93d-4897-9958-e6c682c9493e)
-    (property "Reference" "SW78" (id 0) (at 410.845 374.65 0))
+    (property "Reference" "SW80" (id 0) (at 410.845 374.65 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 410.845 379.73 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13868,7 +13906,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 434.975 247.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid c47175e9-db9b-4909-bd9c-8502047d891d)
-    (property "Reference" "SW13" (id 0) (at 434.975 246.38 0))
+    (property "Reference" "SW15" (id 0) (at 434.975 246.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 434.975 251.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13888,7 +13926,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 434.975 279.4 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid c9a2b1fa-379e-4f16-b5ad-df36479d7909)
-    (property "Reference" "SW29" (id 0) (at 434.975 278.13 0))
+    (property "Reference" "SW31" (id 0) (at 434.975 278.13 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 434.975 283.21 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13908,7 +13946,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 434.975 311.15 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 73a0e687-3e7b-414d-9007-f969d9979402)
-    (property "Reference" "SW44" (id 0) (at 434.975 309.88 0))
+    (property "Reference" "SW46" (id 0) (at 434.975 309.88 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 434.975 314.96 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13928,7 +13966,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 434.975 342.9 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 19fb35ba-55c6-49f7-ac15-262df9a8c5ef)
-    (property "Reference" "SW61" (id 0) (at 434.975 341.63 0))
+    (property "Reference" "SW63" (id 0) (at 434.975 341.63 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 434.975 346.71 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13948,7 +13986,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 434.975 374.65 90) (mirror x) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 90e18a02-b81d-4c90-bc43-b22b4d9415cc)
-    (property "Reference" "SW71" (id 0) (at 433.705 374.65 0))
+    (property "Reference" "SW73" (id 0) (at 433.705 374.65 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 438.785 374.65 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -13968,7 +14006,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 460.375 247.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid dec6077a-cb6f-4549-b522-2e72afcfe563)
-    (property "Reference" "SW14" (id 0) (at 456.565 245.11 0)
+    (property "Reference" "SW16" (id 0) (at 456.565 245.11 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 460.375 251.46 0)
@@ -13990,7 +14028,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 460.375 279.4 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 03e9d0aa-b6ad-4b13-8715-6268320568ba)
-    (property "Reference" "SW30" (id 0) (at 460.375 278.13 0))
+    (property "Reference" "SW32" (id 0) (at 460.375 278.13 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 460.375 283.21 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -14010,7 +14048,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 460.375 311.15 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid e1b627c0-ec47-40a2-a5a9-7c8f70301009)
-    (property "Reference" "SW45" (id 0) (at 460.375 309.88 0))
+    (property "Reference" "SW47" (id 0) (at 460.375 309.88 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 460.375 314.96 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -14030,7 +14068,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 460.375 342.9 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid c43bdf15-8d5e-4ed3-b9c3-bdc5fd75126f)
-    (property "Reference" "SW62" (id 0) (at 460.375 341.63 0))
+    (property "Reference" "SW64" (id 0) (at 460.375 341.63 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 460.375 346.71 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -14050,7 +14088,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 460.375 374.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 2b5004d9-e3ec-4a3f-a74f-ee5c98b182c7)
-    (property "Reference" "SW72" (id 0) (at 460.375 373.38 0))
+    (property "Reference" "SW74" (id 0) (at 460.375 373.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 460.375 378.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -14070,7 +14108,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 461.645 248.92 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 599afb49-07eb-4c54-9978-b4fefade6970)
-    (property "Reference" "SW16" (id 0) (at 456.565 250.19 0)
+    (property "Reference" "SW18" (id 0) (at 456.565 250.19 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 461.645 252.73 0)
@@ -14092,7 +14130,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 461.645 312.42 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid cd48aa33-8272-45c8-8d60-3f430def95a2)
-    (property "Reference" "SW48" (id 0) (at 461.645 311.15 0))
+    (property "Reference" "SW50" (id 0) (at 461.645 311.15 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 461.645 316.23 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -14154,7 +14192,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 485.775 247.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid ba685f3f-e1ee-4c5a-a97a-dc5f150b1406)
-    (property "Reference" "SW15" (id 0) (at 485.775 246.38 0))
+    (property "Reference" "SW17" (id 0) (at 485.775 246.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 485.775 251.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -14174,7 +14212,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 485.775 279.4 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 9083bffb-17ce-4e10-8035-a2055c435bfd)
-    (property "Reference" "SW31" (id 0) (at 485.775 278.13 0))
+    (property "Reference" "SW33" (id 0) (at 485.775 278.13 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 485.775 283.21 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -14194,7 +14232,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 485.775 311.15 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid cfe946df-b64c-4ba7-83bb-2124257dd7a9)
-    (property "Reference" "SW46" (id 0) (at 485.775 309.88 0))
+    (property "Reference" "SW48" (id 0) (at 485.775 309.88 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 485.775 314.96 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -14214,7 +14252,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 485.775 342.9 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid 7bb47826-323d-469d-91c8-597b65e5c79b)
-    (property "Reference" "SW63" (id 0) (at 485.775 341.63 0))
+    (property "Reference" "SW65" (id 0) (at 485.775 341.63 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 485.775 346.71 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -14234,7 +14272,7 @@
   (symbol (lib_id "acheron_Symbols:Mechanical_Switch") (at 485.775 374.65 0) (unit 1)
     (in_bom no) (on_board yes)
     (uuid c54d63a3-8ad6-49fb-9a5b-b691c9f4c55a)
-    (property "Reference" "SW73" (id 0) (at 485.775 373.38 0))
+    (property "Reference" "SW75" (id 0) (at 485.775 373.38 0))
     (property "Value" "MX style mechanical keyboard switch" (id 1) (at 485.775 378.46 0)
       (effects (font (size 0.762 0.762)) hide)
     )
@@ -14380,7 +14418,7 @@
   (symbol (lib_id "Memory_EEPROM:24LC256") (at 58.42 55.245 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid c8e712f6-78e0-49b7-a1ec-8ed6eaeff69e)
-    (property "Reference" "U1" (id 0) (at 55.245 45.085 0))
+    (property "Reference" "U2" (id 0) (at 55.245 45.085 0))
     (property "Value" "BL24C256A-SFRC" (id 1) (at 48.895 47.625 0))
     (property "Footprint" "acheron_Components:TSSOP-8_4.4x3mm_P0.65mm" (id 2) (at 58.42 55.245 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -14416,7 +14454,7 @@
   (symbol (lib_id "acheronSymbols:TXS0101") (at 765.81 50.8 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 10392d6a-d085-40d0-814f-1c5da8446b49)
-    (property "Reference" "U3" (id 0) (at 765.81 49.53 0))
+    (property "Reference" "U1" (id 0) (at 765.81 49.53 0))
     (property "Value" "TXS0101DBVR" (id 1) (at 765.81 52.07 0)
       (effects (font (size 0.762 0.762)))
     )
@@ -14527,7 +14565,7 @@
   (symbol (lib_id "acheron_Symbols:STM32F411-48") (at 244.475 96.52 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 02758f52-a200-46b5-b27b-07b7b8c9a0ad)
-    (property "Reference" "U2" (id 0) (at 244.475 95.885 0)
+    (property "Reference" "U3" (id 0) (at 244.475 95.885 0)
       (effects (font (size 2.0066 2.0066) bold))
     )
     (property "Value" "STM32F411CEU6" (id 1) (at 244.475 99.06 0)
@@ -14609,103 +14647,103 @@
   )
 
   (symbol_instances
-    (path "/2e2f0f7a-7a10-425d-b46d-b5ef3c5916b3"
+    (path "/d550c967-eeb7-4a54-a37a-2e770313bc77"
       (reference "#PWR01") (unit 1) (value "GND") (footprint "")
     )
-    (path "/8a74ce62-1f55-4ee1-a4e4-e97e757c9733"
+    (path "/82ddcf6a-40be-4669-90c0-9e14391854db"
       (reference "#PWR02") (unit 1) (value "GND") (footprint "")
     )
-    (path "/c8275101-1364-40ab-b017-f62d46a82121"
+    (path "/2e2f0f7a-7a10-425d-b46d-b5ef3c5916b3"
       (reference "#PWR03") (unit 1) (value "GND") (footprint "")
     )
-    (path "/502e6360-06d4-4655-8e60-192df6cc7158"
+    (path "/8a74ce62-1f55-4ee1-a4e4-e97e757c9733"
       (reference "#PWR04") (unit 1) (value "GND") (footprint "")
     )
-    (path "/5e77a658-e0cd-4b62-a6a4-2305410f2942"
+    (path "/c8275101-1364-40ab-b017-f62d46a82121"
       (reference "#PWR05") (unit 1) (value "GND") (footprint "")
     )
-    (path "/86f8284e-7d06-42ab-8be8-0de3a911e37a"
+    (path "/502e6360-06d4-4655-8e60-192df6cc7158"
       (reference "#PWR06") (unit 1) (value "GND") (footprint "")
     )
-    (path "/ca52fd70-a4ed-49fa-9e4a-afef167b12d7"
+    (path "/5e77a658-e0cd-4b62-a6a4-2305410f2942"
       (reference "#PWR07") (unit 1) (value "GND") (footprint "")
     )
-    (path "/3b9e78a6-ed8f-4d3e-ba2d-f066d261222d"
+    (path "/86f8284e-7d06-42ab-8be8-0de3a911e37a"
       (reference "#PWR08") (unit 1) (value "GND") (footprint "")
     )
-    (path "/b56893c0-e20b-4468-b035-1f4387f4a8b4"
+    (path "/ca52fd70-a4ed-49fa-9e4a-afef167b12d7"
       (reference "#PWR09") (unit 1) (value "GND") (footprint "")
     )
-    (path "/93844290-9f25-45da-8e4b-3244a868a818"
+    (path "/3b9e78a6-ed8f-4d3e-ba2d-f066d261222d"
       (reference "#PWR010") (unit 1) (value "GND") (footprint "")
     )
-    (path "/de972ea1-0272-49aa-a5d0-16e246c5548c"
+    (path "/b56893c0-e20b-4468-b035-1f4387f4a8b4"
       (reference "#PWR011") (unit 1) (value "GND") (footprint "")
     )
-    (path "/1015f781-03a4-42ba-8342-61eb0832c7a0"
+    (path "/7e439bc3-fe0c-4246-a7b1-937d8fbd1cdd"
       (reference "#PWR012") (unit 1) (value "GND") (footprint "")
     )
-    (path "/aecc51d7-f012-41d7-a653-8783c53cbbd0"
+    (path "/93844290-9f25-45da-8e4b-3244a868a818"
       (reference "#PWR013") (unit 1) (value "GND") (footprint "")
     )
-    (path "/e73eed80-c6fc-4b29-a856-93e1e878c225"
+    (path "/de972ea1-0272-49aa-a5d0-16e246c5548c"
       (reference "#PWR014") (unit 1) (value "GND") (footprint "")
     )
-    (path "/77eee335-b040-4c8b-bf04-e4476acd2b92"
+    (path "/1015f781-03a4-42ba-8342-61eb0832c7a0"
       (reference "#PWR015") (unit 1) (value "GND") (footprint "")
     )
-    (path "/67ba9740-067b-4fa9-b168-03d18f72ae73"
+    (path "/aecc51d7-f012-41d7-a653-8783c53cbbd0"
       (reference "#PWR016") (unit 1) (value "GND") (footprint "")
     )
-    (path "/e87e86fd-d90f-482b-b45e-8fe93bb263a8"
+    (path "/bacb48ad-ea74-4768-aa8a-0421fe6e8244"
       (reference "#PWR017") (unit 1) (value "GND") (footprint "")
     )
-    (path "/53a8f53f-38a3-47a0-a1a1-d446644ee34c"
+    (path "/767cb4cb-093f-4717-bdc6-7c31b550e640"
       (reference "#PWR018") (unit 1) (value "GND") (footprint "")
     )
-    (path "/4eacd81f-f9ab-4325-a273-2b99af8e5f5d"
+    (path "/518aa19e-da52-4178-9e36-88a34bbed272"
       (reference "#PWR019") (unit 1) (value "GND") (footprint "")
     )
-    (path "/2c585256-384a-4afe-a19d-c231b5f31c7a"
+    (path "/e73eed80-c6fc-4b29-a856-93e1e878c225"
       (reference "#PWR020") (unit 1) (value "GND") (footprint "")
     )
-    (path "/c25e99c6-1a86-494c-b523-349172c7b034"
+    (path "/e8bd9950-cdc5-499a-9221-0022513ee313"
       (reference "#PWR021") (unit 1) (value "GND") (footprint "")
     )
-    (path "/767cb4cb-093f-4717-bdc6-7c31b550e640"
+    (path "/77eee335-b040-4c8b-bf04-e4476acd2b92"
       (reference "#PWR022") (unit 1) (value "GND") (footprint "")
     )
-    (path "/bacb48ad-ea74-4768-aa8a-0421fe6e8244"
+    (path "/67ba9740-067b-4fa9-b168-03d18f72ae73"
       (reference "#PWR023") (unit 1) (value "GND") (footprint "")
     )
-    (path "/518aa19e-da52-4178-9e36-88a34bbed272"
+    (path "/634e02ac-9c92-4052-9d67-4a6a8b01150d"
       (reference "#PWR024") (unit 1) (value "GND") (footprint "")
     )
-    (path "/e8bd9950-cdc5-499a-9221-0022513ee313"
+    (path "/0c01dec0-4120-44fa-bbf0-57493123b236"
       (reference "#PWR025") (unit 1) (value "GND") (footprint "")
     )
-    (path "/d550c967-eeb7-4a54-a37a-2e770313bc77"
+    (path "/32ac5e0d-582e-4eb3-84c5-43758f7844ff"
       (reference "#PWR026") (unit 1) (value "GND") (footprint "")
     )
-    (path "/82ddcf6a-40be-4669-90c0-9e14391854db"
+    (path "/a4ba51d2-f35a-4841-ad25-ea098a52eb30"
       (reference "#PWR027") (unit 1) (value "GND") (footprint "")
     )
-    (path "/7e439bc3-fe0c-4246-a7b1-937d8fbd1cdd"
+    (path "/472d5718-e734-456e-9e69-3d408eb6cb33"
       (reference "#PWR028") (unit 1) (value "GND") (footprint "")
     )
-    (path "/634e02ac-9c92-4052-9d67-4a6a8b01150d"
+    (path "/e87e86fd-d90f-482b-b45e-8fe93bb263a8"
       (reference "#PWR029") (unit 1) (value "GND") (footprint "")
     )
-    (path "/0c01dec0-4120-44fa-bbf0-57493123b236"
+    (path "/53a8f53f-38a3-47a0-a1a1-d446644ee34c"
       (reference "#PWR030") (unit 1) (value "GND") (footprint "")
     )
-    (path "/32ac5e0d-582e-4eb3-84c5-43758f7844ff"
+    (path "/4eacd81f-f9ab-4325-a273-2b99af8e5f5d"
       (reference "#PWR031") (unit 1) (value "GND") (footprint "")
     )
-    (path "/a4ba51d2-f35a-4841-ad25-ea098a52eb30"
+    (path "/2c585256-384a-4afe-a19d-c231b5f31c7a"
       (reference "#PWR032") (unit 1) (value "GND") (footprint "")
     )
-    (path "/472d5718-e734-456e-9e69-3d408eb6cb33"
+    (path "/c25e99c6-1a86-494c-b523-349172c7b034"
       (reference "#PWR033") (unit 1) (value "GND") (footprint "")
     )
     (path "/70dd3129-5d36-4a6a-80e4-3a243482fb49"
@@ -14768,82 +14806,82 @@
     (path "/db6d972f-0f59-4b4a-b67e-205000b8a9fd"
       (reference "#PWR053") (unit 1) (value "GND") (footprint "")
     )
-    (path "/be7d28c8-08e1-403a-9ec1-22c7795071a4"
+    (path "/262b6ab9-38b7-47fc-b9b9-8937f82c36ac"
       (reference "#PWR054") (unit 1) (value "GND") (footprint "")
     )
-    (path "/46f7d839-08cc-483f-9c27-3e358dfa9e24"
+    (path "/d3b43fc2-f1ce-4b53-aab3-d4ac5909b4b1"
       (reference "#PWR055") (unit 1) (value "GND") (footprint "")
     )
-    (path "/446d1576-09e4-4f2c-9146-95ab9b902925"
+    (path "/7bb31999-a90c-4237-8fc8-80e52cac6c05"
       (reference "#PWR056") (unit 1) (value "GND") (footprint "")
     )
-    (path "/9faa2b8d-c01e-43e5-9e77-2c4bbb95fb9f"
+    (path "/906cb75a-590a-4a3a-9589-f5cd57c6e3c4"
       (reference "#PWR057") (unit 1) (value "GND") (footprint "")
     )
-    (path "/f8302f94-0937-42da-84c6-3218d3f72195"
+    (path "/ef00a706-d668-4538-8468-294bd568ea52"
       (reference "#PWR058") (unit 1) (value "GND") (footprint "")
     )
-    (path "/02273aee-20d4-4d39-865c-5891719128e4"
+    (path "/1de5a374-771d-4b22-82b5-fd2c64a865b0"
       (reference "#PWR059") (unit 1) (value "GND") (footprint "")
     )
-    (path "/67455e65-a590-4272-99d2-60e294fec326"
+    (path "/e18776ca-8ad0-4945-b9c5-e033b60f4efc"
       (reference "#PWR060") (unit 1) (value "GND") (footprint "")
     )
-    (path "/53e071bb-e8da-4134-a645-5751d71d6ea9"
+    (path "/0230d657-b3f5-4a6b-abe4-b5f948fbf615"
       (reference "#PWR061") (unit 1) (value "GND") (footprint "")
     )
-    (path "/bd72b8d8-a7f6-4677-9339-cb1701a66043"
+    (path "/8612f32b-1c60-47fc-a38f-0a4c58b06341"
       (reference "#PWR062") (unit 1) (value "GND") (footprint "")
     )
-    (path "/969115dc-0a0e-41a5-92db-278a0c7900be"
+    (path "/36bb0cf5-fd81-43e3-894f-fe6f4338ebe2"
       (reference "#PWR063") (unit 1) (value "GND") (footprint "")
     )
-    (path "/76b93b87-028d-4a7f-869f-045bf2b3f6f4"
+    (path "/16c36eb5-a2ee-4fc8-b6d0-2b804938045a"
       (reference "#PWR064") (unit 1) (value "GND") (footprint "")
     )
-    (path "/88d38e58-eb9c-424a-baf8-6399d2d1ec34"
+    (path "/2659f97c-a8bd-45cc-903f-41867b48e4e5"
       (reference "#PWR065") (unit 1) (value "GND") (footprint "")
     )
-    (path "/ee8bf0e6-9b46-4952-a46f-b0cdc46dd000"
+    (path "/4af216d5-55c3-4caa-a266-e3bade1bd8ee"
       (reference "#PWR066") (unit 1) (value "GND") (footprint "")
     )
-    (path "/262b6ab9-38b7-47fc-b9b9-8937f82c36ac"
+    (path "/be7d28c8-08e1-403a-9ec1-22c7795071a4"
       (reference "#PWR067") (unit 1) (value "GND") (footprint "")
     )
-    (path "/d3b43fc2-f1ce-4b53-aab3-d4ac5909b4b1"
+    (path "/46f7d839-08cc-483f-9c27-3e358dfa9e24"
       (reference "#PWR068") (unit 1) (value "GND") (footprint "")
     )
-    (path "/7bb31999-a90c-4237-8fc8-80e52cac6c05"
+    (path "/446d1576-09e4-4f2c-9146-95ab9b902925"
       (reference "#PWR069") (unit 1) (value "GND") (footprint "")
     )
-    (path "/906cb75a-590a-4a3a-9589-f5cd57c6e3c4"
+    (path "/9faa2b8d-c01e-43e5-9e77-2c4bbb95fb9f"
       (reference "#PWR070") (unit 1) (value "GND") (footprint "")
     )
-    (path "/ef00a706-d668-4538-8468-294bd568ea52"
+    (path "/f8302f94-0937-42da-84c6-3218d3f72195"
       (reference "#PWR071") (unit 1) (value "GND") (footprint "")
     )
-    (path "/1de5a374-771d-4b22-82b5-fd2c64a865b0"
+    (path "/02273aee-20d4-4d39-865c-5891719128e4"
       (reference "#PWR072") (unit 1) (value "GND") (footprint "")
     )
-    (path "/e18776ca-8ad0-4945-b9c5-e033b60f4efc"
+    (path "/67455e65-a590-4272-99d2-60e294fec326"
       (reference "#PWR073") (unit 1) (value "GND") (footprint "")
     )
-    (path "/0230d657-b3f5-4a6b-abe4-b5f948fbf615"
+    (path "/53e071bb-e8da-4134-a645-5751d71d6ea9"
       (reference "#PWR074") (unit 1) (value "GND") (footprint "")
     )
-    (path "/8612f32b-1c60-47fc-a38f-0a4c58b06341"
+    (path "/bd72b8d8-a7f6-4677-9339-cb1701a66043"
       (reference "#PWR075") (unit 1) (value "GND") (footprint "")
     )
-    (path "/36bb0cf5-fd81-43e3-894f-fe6f4338ebe2"
+    (path "/969115dc-0a0e-41a5-92db-278a0c7900be"
       (reference "#PWR076") (unit 1) (value "GND") (footprint "")
     )
-    (path "/16c36eb5-a2ee-4fc8-b6d0-2b804938045a"
+    (path "/76b93b87-028d-4a7f-869f-045bf2b3f6f4"
       (reference "#PWR077") (unit 1) (value "GND") (footprint "")
     )
-    (path "/2659f97c-a8bd-45cc-903f-41867b48e4e5"
+    (path "/88d38e58-eb9c-424a-baf8-6399d2d1ec34"
       (reference "#PWR078") (unit 1) (value "GND") (footprint "")
     )
-    (path "/4af216d5-55c3-4caa-a266-e3bade1bd8ee"
+    (path "/ee8bf0e6-9b46-4952-a46f-b0cdc46dd000"
       (reference "#PWR079") (unit 1) (value "GND") (footprint "")
     )
     (path "/8f86c682-b86b-4270-bd19-c1944c64c50e"
@@ -14885,56 +14923,56 @@
     (path "/d362d5bc-228d-4053-af59-99d274e67985"
       (reference "#PWR092") (unit 1) (value "GND") (footprint "")
     )
-    (path "/dea96ffa-f040-44f2-9288-2280878ceaa6"
-      (reference "C1") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0402_1005Metric")
-    )
-    (path "/65eb09f4-2ab6-44bc-b56c-63db1d7f56c7"
-      (reference "C2") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0402_1005Metric")
-    )
-    (path "/64ba220f-184b-460a-8095-3b0147098bd8"
-      (reference "C3") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0402_1005Metric")
-    )
-    (path "/5f87e742-3483-47d1-93d6-32953b491d31"
-      (reference "C4") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0402_1005Metric")
-    )
-    (path "/3678860b-fef6-4f94-b2ff-af29abad75a7"
-      (reference "C5") (unit 1) (value "4.7u") (footprint "Capacitor_SMD:C_0402_1005Metric")
-    )
-    (path "/a8a60c15-5fae-4b8f-b4e1-c63e14b959bb"
-      (reference "C6") (unit 1) (value "1u") (footprint "Capacitor_SMD:C_0402_1005Metric")
-    )
-    (path "/74c34d78-9dac-4a55-9726-8706d257602c"
-      (reference "C7") (unit 1) (value "10n") (footprint "Capacitor_SMD:C_0402_1005Metric")
-    )
-    (path "/a2525e67-3c27-4302-a0a1-33c7fe2d0219"
-      (reference "C8") (unit 1) (value "16p") (footprint "Capacitor_SMD:C_0402_1005Metric")
-    )
-    (path "/a06543b8-a8d4-4924-85d0-c37f94a0f619"
-      (reference "C9") (unit 1) (value "16p") (footprint "Capacitor_SMD:C_0402_1005Metric")
-    )
-    (path "/c25a1462-f7ad-4ba5-b41d-857183aea689"
-      (reference "C10") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0402_1005Metric")
-    )
-    (path "/7984f09e-521a-4220-a0a8-1093ecf09458"
-      (reference "C11") (unit 1) (value "2.2u") (footprint "Capacitor_SMD:C_0402_1005Metric")
-    )
-    (path "/a3c49907-1623-4eae-ab23-7da92964f2f3"
-      (reference "C12") (unit 1) (value "4.7u") (footprint "Capacitor_SMD:C_0402_1005Metric")
-    )
-    (path "/5c99615a-bbdf-4d9d-b476-0b21565c31d2"
-      (reference "C13") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
-    )
     (path "/1350a921-0401-43e5-93cb-d246ce42872b"
-      (reference "C14") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+      (reference "C1") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
     (path "/95ea561b-34d7-4e96-abaa-38dad6786a7c"
-      (reference "C15") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+      (reference "C2") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/dea96ffa-f040-44f2-9288-2280878ceaa6"
+      (reference "C3") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0402_1005Metric")
+    )
+    (path "/65eb09f4-2ab6-44bc-b56c-63db1d7f56c7"
+      (reference "C4") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0402_1005Metric")
+    )
+    (path "/64ba220f-184b-460a-8095-3b0147098bd8"
+      (reference "C5") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0402_1005Metric")
+    )
+    (path "/5f87e742-3483-47d1-93d6-32953b491d31"
+      (reference "C6") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0402_1005Metric")
+    )
+    (path "/3678860b-fef6-4f94-b2ff-af29abad75a7"
+      (reference "C7") (unit 1) (value "4.7u") (footprint "Capacitor_SMD:C_0402_1005Metric")
+    )
+    (path "/5c99615a-bbdf-4d9d-b476-0b21565c31d2"
+      (reference "C8") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
+    (path "/a8a60c15-5fae-4b8f-b4e1-c63e14b959bb"
+      (reference "C9") (unit 1) (value "1u") (footprint "Capacitor_SMD:C_0402_1005Metric")
+    )
+    (path "/74c34d78-9dac-4a55-9726-8706d257602c"
+      (reference "C10") (unit 1) (value "10n") (footprint "Capacitor_SMD:C_0402_1005Metric")
     )
     (path "/5058a176-c221-4264-98cb-eb7cb0edd422"
-      (reference "C16") (unit 1) (value "1u") (footprint "acheron_Components:CP_EIA-3216-10_Kemet-I_Pad1.58x1.35mm_HandSolder")
+      (reference "C11") (unit 1) (value "1u") (footprint "acheron_Components:CP_EIA-3216-10_Kemet-I_Pad1.58x1.35mm_HandSolder")
     )
     (path "/51efe9a4-2b16-4791-bfc0-1c249dc92509"
-      (reference "C17") (unit 1) (value "1u") (footprint "acheron_Components:CP_EIA-3216-10_Kemet-I_Pad1.58x1.35mm_HandSolder")
+      (reference "C12") (unit 1) (value "1u") (footprint "acheron_Components:CP_EIA-3216-10_Kemet-I_Pad1.58x1.35mm_HandSolder")
+    )
+    (path "/a2525e67-3c27-4302-a0a1-33c7fe2d0219"
+      (reference "C13") (unit 1) (value "16p") (footprint "Capacitor_SMD:C_0402_1005Metric")
+    )
+    (path "/a06543b8-a8d4-4924-85d0-c37f94a0f619"
+      (reference "C14") (unit 1) (value "16p") (footprint "Capacitor_SMD:C_0402_1005Metric")
+    )
+    (path "/c25a1462-f7ad-4ba5-b41d-857183aea689"
+      (reference "C15") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0402_1005Metric")
+    )
+    (path "/7984f09e-521a-4220-a0a8-1093ecf09458"
+      (reference "C16") (unit 1) (value "2.2u") (footprint "Capacitor_SMD:C_0402_1005Metric")
+    )
+    (path "/a3c49907-1623-4eae-ab23-7da92964f2f3"
+      (reference "C17") (unit 1) (value "4.7u") (footprint "Capacitor_SMD:C_0402_1005Metric")
     )
     (path "/298d0f19-d760-4c78-8b22-f5dd926e5281"
       (reference "C18") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
@@ -15014,215 +15052,215 @@
     (path "/8db205e5-e50a-4ed9-a7cf-40439eb0e656"
       (reference "C43") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
-    (path "/6bbe74d4-9a94-4f52-93ab-dfaf149103af"
-      (reference "D1") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
+    (path "/6ac24fbc-988f-4518-908e-6f80d88532a3"
+      (reference "D1") (unit 1) (value "RB060M-60TR") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/06723eea-f0d7-4c29-8d7c-8173a94f3f24"
+    (path "/6bbe74d4-9a94-4f52-93ab-dfaf149103af"
       (reference "D2") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/513eedff-6b89-4842-bdd2-793e3330584b"
+    (path "/06723eea-f0d7-4c29-8d7c-8173a94f3f24"
       (reference "D3") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/16ea943f-f171-42e6-810d-2ea3f78deb94"
+    (path "/513eedff-6b89-4842-bdd2-793e3330584b"
       (reference "D4") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/cea538c7-90fa-407e-94dd-21168bac5dd0"
+    (path "/16ea943f-f171-42e6-810d-2ea3f78deb94"
       (reference "D5") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/6506de9e-9757-43ab-a552-83016ed23f7f"
+    (path "/cea538c7-90fa-407e-94dd-21168bac5dd0"
       (reference "D6") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/18273649-a709-4922-a96a-acda878e952a"
+    (path "/6506de9e-9757-43ab-a552-83016ed23f7f"
       (reference "D7") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/e4efcbea-49e7-4abb-99b9-ada940950767"
+    (path "/18273649-a709-4922-a96a-acda878e952a"
       (reference "D8") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/ce1f6e23-e1ac-41c6-8150-6b7e7496b68a"
+    (path "/e4efcbea-49e7-4abb-99b9-ada940950767"
       (reference "D9") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/48b137e0-700e-450e-9edf-ec5d28d6f6ef"
+    (path "/ce1f6e23-e1ac-41c6-8150-6b7e7496b68a"
       (reference "D10") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/24bf70eb-8ada-48b7-8fd0-3eccc0cc7129"
+    (path "/48b137e0-700e-450e-9edf-ec5d28d6f6ef"
       (reference "D11") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/b3294976-da16-4321-a608-9cc396977c44"
+    (path "/24bf70eb-8ada-48b7-8fd0-3eccc0cc7129"
       (reference "D12") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/61e1db13-ba78-46e8-8acc-5b07b98baed0"
+    (path "/b3294976-da16-4321-a608-9cc396977c44"
       (reference "D13") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/bd7e09a9-e7ce-431d-b835-51d92ceb03dc"
+    (path "/61e1db13-ba78-46e8-8acc-5b07b98baed0"
       (reference "D14") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/3ad426fb-629a-470a-8413-8fc80a072683"
+    (path "/bd7e09a9-e7ce-431d-b835-51d92ceb03dc"
       (reference "D15") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/172da646-d8d3-4285-aafe-b6ffe1c8890f"
+    (path "/3ad426fb-629a-470a-8413-8fc80a072683"
       (reference "D16") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/cebc3f54-ba28-41c1-9f58-4cb993abb353"
+    (path "/172da646-d8d3-4285-aafe-b6ffe1c8890f"
       (reference "D17") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/b9e2370a-2b0d-4cc7-87cc-aa8c3de3f2a1"
+    (path "/cebc3f54-ba28-41c1-9f58-4cb993abb353"
       (reference "D18") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/ae9aae55-e268-425e-8c76-acf451d5d7d7"
+    (path "/b9e2370a-2b0d-4cc7-87cc-aa8c3de3f2a1"
       (reference "D19") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/ff022185-47cd-4ee7-8ebe-44d60e8f56d7"
+    (path "/ae9aae55-e268-425e-8c76-acf451d5d7d7"
       (reference "D20") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/4f6e6500-c971-4a2f-9377-9eeedbaaeb34"
+    (path "/ff022185-47cd-4ee7-8ebe-44d60e8f56d7"
       (reference "D21") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/178cb752-590f-4fab-bff2-1dff20aece4b"
+    (path "/4f6e6500-c971-4a2f-9377-9eeedbaaeb34"
       (reference "D22") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/75f0cc28-8257-4c04-bd85-6032845d05d0"
+    (path "/178cb752-590f-4fab-bff2-1dff20aece4b"
       (reference "D23") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/82de99a1-b1a4-4ba9-95f0-6b2d243e3f30"
+    (path "/75f0cc28-8257-4c04-bd85-6032845d05d0"
       (reference "D24") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/e157a67f-ee72-4532-97a9-abd00dd8a5e5"
+    (path "/82de99a1-b1a4-4ba9-95f0-6b2d243e3f30"
       (reference "D25") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/b89a0503-d3f3-4eb1-b203-c8143602b371"
+    (path "/e157a67f-ee72-4532-97a9-abd00dd8a5e5"
       (reference "D26") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/e5e71152-14df-464e-a3bd-a644fa74112b"
+    (path "/b89a0503-d3f3-4eb1-b203-c8143602b371"
       (reference "D27") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/4d7af091-2c68-45ee-9188-0afb3fdb1328"
+    (path "/e5e71152-14df-464e-a3bd-a644fa74112b"
       (reference "D28") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/df805b9e-4a04-4dec-b983-af14a975c209"
+    (path "/4d7af091-2c68-45ee-9188-0afb3fdb1328"
       (reference "D29") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/b0e6cfaf-06a1-4c2a-91b3-57e8484c0865"
+    (path "/df805b9e-4a04-4dec-b983-af14a975c209"
       (reference "D30") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/e4ed29ce-b9a5-423f-8677-f10a34b6ce99"
+    (path "/b0e6cfaf-06a1-4c2a-91b3-57e8484c0865"
       (reference "D31") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/962cb0a1-e04e-4d11-99df-a27aa2c9d3ab"
+    (path "/e4ed29ce-b9a5-423f-8677-f10a34b6ce99"
       (reference "D32") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/cec74564-9cb0-47ac-8908-1ddcb376f25b"
+    (path "/962cb0a1-e04e-4d11-99df-a27aa2c9d3ab"
       (reference "D33") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/7f3bbd6b-dfd0-4e59-96b5-c33a1a98f998"
+    (path "/cec74564-9cb0-47ac-8908-1ddcb376f25b"
       (reference "D34") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/dfcc2fb5-fdf2-4bc4-bb1a-6bdcce26d22f"
+    (path "/7f3bbd6b-dfd0-4e59-96b5-c33a1a98f998"
       (reference "D35") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/05933246-f609-4dd3-b8a2-9a82aae9dd29"
+    (path "/dfcc2fb5-fdf2-4bc4-bb1a-6bdcce26d22f"
       (reference "D36") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/2a7de098-6735-44a7-8389-abca70b90bb2"
+    (path "/05933246-f609-4dd3-b8a2-9a82aae9dd29"
       (reference "D37") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/9a474287-d1d6-47fc-b694-60945a4a33cd"
+    (path "/2a7de098-6735-44a7-8389-abca70b90bb2"
       (reference "D38") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/9b5cf202-617a-4980-a9ae-34c5e7cd62f7"
+    (path "/9a474287-d1d6-47fc-b694-60945a4a33cd"
       (reference "D39") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/eb369774-0ddd-4a38-a61b-037315155c19"
+    (path "/9b5cf202-617a-4980-a9ae-34c5e7cd62f7"
       (reference "D40") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/2e2253f9-4dd8-4b2b-b41b-21d57dd23952"
+    (path "/eb369774-0ddd-4a38-a61b-037315155c19"
       (reference "D41") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/cbadcc1f-b19e-4fc4-9c9c-0914ff750356"
+    (path "/2e2253f9-4dd8-4b2b-b41b-21d57dd23952"
       (reference "D42") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/27d72ea6-67c9-4b26-8367-9c66236cba43"
+    (path "/cbadcc1f-b19e-4fc4-9c9c-0914ff750356"
       (reference "D43") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/eebea425-1058-4018-aa7b-d483dc2f07ac"
+    (path "/27d72ea6-67c9-4b26-8367-9c66236cba43"
       (reference "D44") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/48ffa66f-ed81-4ed5-8f49-358043bc16f2"
+    (path "/eebea425-1058-4018-aa7b-d483dc2f07ac"
       (reference "D45") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/47c7e554-2eaf-463f-a06c-4b8568096b3b"
+    (path "/48ffa66f-ed81-4ed5-8f49-358043bc16f2"
       (reference "D46") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/292cb109-837a-429c-a26f-beb357cf9bd3"
+    (path "/47c7e554-2eaf-463f-a06c-4b8568096b3b"
       (reference "D47") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/8751dfe5-0ca5-4f96-b6e3-71a7f7a242bf"
+    (path "/292cb109-837a-429c-a26f-beb357cf9bd3"
       (reference "D48") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/4aa40c63-66fe-480c-b415-9f60b27a9c18"
+    (path "/8751dfe5-0ca5-4f96-b6e3-71a7f7a242bf"
       (reference "D49") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/e757b3a3-8925-44dc-afac-a46514a64b83"
+    (path "/4aa40c63-66fe-480c-b415-9f60b27a9c18"
       (reference "D50") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/e7b663a1-ecaa-4c0d-b58a-ce940543ea6d"
+    (path "/e757b3a3-8925-44dc-afac-a46514a64b83"
       (reference "D51") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/ffe08c13-555b-4df6-974e-8600815bc605"
+    (path "/e7b663a1-ecaa-4c0d-b58a-ce940543ea6d"
       (reference "D52") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/5dd6f624-3466-44d8-9dec-5a0a56dc9d65"
+    (path "/ffe08c13-555b-4df6-974e-8600815bc605"
       (reference "D53") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/b7728f02-790d-4600-b998-3ebaff0b868d"
+    (path "/5dd6f624-3466-44d8-9dec-5a0a56dc9d65"
       (reference "D54") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/a93da767-1fa4-414f-ae90-1959b0e73d4b"
+    (path "/b7728f02-790d-4600-b998-3ebaff0b868d"
       (reference "D55") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/657ad4d3-68e4-42bc-af85-5d36f437816c"
+    (path "/a93da767-1fa4-414f-ae90-1959b0e73d4b"
       (reference "D56") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/317091e7-844a-45dd-8f8e-d7f102a2725e"
+    (path "/657ad4d3-68e4-42bc-af85-5d36f437816c"
       (reference "D57") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/a3fb9dc3-f289-479b-b5c0-99930f84b48b"
+    (path "/317091e7-844a-45dd-8f8e-d7f102a2725e"
       (reference "D58") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/6e16be02-469f-4acd-9358-d1e8bcd32ea7"
+    (path "/a3fb9dc3-f289-479b-b5c0-99930f84b48b"
       (reference "D59") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/d7bc5282-62e3-416c-9f51-076fa8615526"
+    (path "/6e16be02-469f-4acd-9358-d1e8bcd32ea7"
       (reference "D60") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/e921f6c9-f49b-490e-96ae-0e83a529707c"
+    (path "/d7bc5282-62e3-416c-9f51-076fa8615526"
       (reference "D61") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/c09cf194-b894-40a1-b03f-f603a9c61c09"
+    (path "/e921f6c9-f49b-490e-96ae-0e83a529707c"
       (reference "D62") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/c1c2f75a-76a2-4e4d-a865-ccc9b840f3d2"
+    (path "/c09cf194-b894-40a1-b03f-f603a9c61c09"
       (reference "D63") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/43ad677e-5c82-47ae-af9f-6e3fc5d9dd77"
+    (path "/c1c2f75a-76a2-4e4d-a865-ccc9b840f3d2"
       (reference "D64") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/962d13da-d830-44b7-a77d-98725335bfa4"
+    (path "/43ad677e-5c82-47ae-af9f-6e3fc5d9dd77"
       (reference "D65") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/23ecd8d3-08a3-478b-ae5d-9f87328e14f7"
+    (path "/962d13da-d830-44b7-a77d-98725335bfa4"
       (reference "D66") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/93c97dd7-76a0-4266-b72b-6d07ba86f2c4"
+    (path "/23ecd8d3-08a3-478b-ae5d-9f87328e14f7"
       (reference "D67") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/40edbf66-05de-4fdb-be8e-8a3fb71ad2ab"
+    (path "/93c97dd7-76a0-4266-b72b-6d07ba86f2c4"
       (reference "D68") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/aa4642c2-3a96-4d37-af52-1c909ccd63d5"
+    (path "/40edbf66-05de-4fdb-be8e-8a3fb71ad2ab"
       (reference "D69") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
-    (path "/6ac24fbc-988f-4518-908e-6f80d88532a3"
-      (reference "D70") (unit 1) (value "RB060M-60TR") (footprint "acheron_Components:D_SOD-123")
+    (path "/aa4642c2-3a96-4d37-af52-1c909ccd63d5"
+      (reference "D70") (unit 1) (value "1N4148W") (footprint "acheron_Components:D_SOD-123")
     )
     (path "/29373542-ddd9-464c-b43f-501737ad1a1e"
       (reference "D71") (unit 1) (value "WS2812B-2020") (footprint "acheron_Components:LED_WS2812_2020")
@@ -15314,8 +15352,11 @@
     (path "/ec60b994-b729-42c1-99a7-764680261810"
       (reference "GR2") (unit 1) (value "Loki Helmet Logo") (footprint "loki65_lib:loki-helmet_18x10mm_plated")
     )
+    (path "/6a69b8e8-d262-4e55-a769-b257da79f57b"
+      (reference "GR3") (unit 1) (value "Lok65 label") (footprint "loki65_lib:loki65_label")
+    )
     (path "/8e51d0fb-9a13-4355-99de-cc137978489b"
-      (reference "J1") (unit 1) (value "EXTRA_PINS") (footprint "acheron_Connectors:PinHeader_1x9_P2.54mm_Vertical")
+      (reference "J1") (unit 1) (value "EXTRA_PINS") (footprint "acheron_Connectors:PinHeader_1x10_P2.54mm_Vertical")
     )
     (path "/a03ac36c-c726-4a54-8b8a-afe27251e938"
       (reference "J2") (unit 1) (value "TYPE-C-31-M-12") (footprint "acheron_Connectors:TYPE-C-31-M-12")
@@ -15332,35 +15373,35 @@
     (path "/d6f42131-d663-411d-8da2-0622e12e0a82"
       (reference "R2") (unit 1) (value "1.5k") (footprint "Resistor_SMD:R_0402_1005Metric")
     )
-    (path "/ed4e6af4-f2d9-4070-a527-8e3ff1fcde5a"
+    (path "/406aee99-6416-447b-b357-33b3467fae0a"
       (reference "R3") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
-    (path "/733bdb7e-01f4-4787-850a-50e92efa88e6"
-      (reference "R4") (unit 1) (value "1.5k") (footprint "Resistor_SMD:R_0402_1005Metric")
-    )
-    (path "/34ea83e5-e2d3-46d3-99be-b50d1ceb6d4f"
-      (reference "R5") (unit 1) (value "0R") (footprint "Resistor_SMD:R_0805_2012Metric")
-    )
-    (path "/aeda58cd-14ae-43a8-ac0f-9fac919d7fa0"
-      (reference "R6") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    (path "/ed4e6af4-f2d9-4070-a527-8e3ff1fcde5a"
+      (reference "R4") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
     (path "/7ef00487-7fa6-40f3-bc7b-6b30e4b42696"
-      (reference "R7") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R5") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
     (path "/5ec0a5c7-81be-47f3-af93-6a5abcc41c1f"
-      (reference "R8") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R6") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/733bdb7e-01f4-4787-850a-50e92efa88e6"
+      (reference "R7") (unit 1) (value "1.5k") (footprint "Resistor_SMD:R_0402_1005Metric")
     )
     (path "/71c337be-b887-4633-90f8-560dd9c7776b"
-      (reference "R9") (unit 1) (value "100R") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R8") (unit 1) (value "100R") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
-    (path "/406aee99-6416-447b-b357-33b3467fae0a"
-      (reference "R10") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    (path "/34ea83e5-e2d3-46d3-99be-b50d1ceb6d4f"
+      (reference "R9") (unit 1) (value "0R") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
     (path "/3c0cafbd-8b69-44fd-aad8-83e3fd3821c6"
-      (reference "R11") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R10") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
     (path "/85343638-68cc-4d71-b327-dee80538d788"
-      (reference "R12") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R11") (unit 1) (value "100k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/aeda58cd-14ae-43a8-ac0f-9fac919d7fa0"
+      (reference "R12") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
     (path "/3ba2c001-25e7-4f18-a785-f39d79e95c07"
       (reference "R13") (unit 1) (value "5.1k") (footprint "Resistor_SMD:R_0805_2012Metric")
@@ -15446,254 +15487,254 @@
     (path "/b8e53b2d-3b19-44f9-a334-112e2e7a06b3"
       (reference "R40") (unit 1) (value "3R") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
-    (path "/f411fa35-9fbb-479e-91c5-1ddecf7270d8"
-      (reference "SW1") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/160ae1a9-f7e9-4dd9-bdbd-a38aa5aab021"
-      (reference "SW2") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/474905c5-e3a5-40a0-a57d-e5613c2c4e3e"
-      (reference "SW3") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/35f77adf-4360-4ae3-aaf4-6e0e8746251c"
-      (reference "SW4") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/12540b2f-d2ed-4eb4-a578-c19fbd5a5055"
-      (reference "SW5") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/d855bf2f-154f-4428-b39e-57fd23bde81b"
-      (reference "SW6") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/145a3c0e-bf60-4c8c-8d73-ff14fe41fcad"
-      (reference "SW7") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/0d1e10e2-6ec2-4059-a30f-53992d70dd47"
-      (reference "SW8") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/5dc20fdb-589b-40a3-a16c-ff7f1091a000"
-      (reference "SW9") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/f154cc56-1f67-49c0-a67a-622721c07da7"
-      (reference "SW10") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/5272d95b-484e-4208-955e-9ac9e1f6fbd8"
-      (reference "SW11") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/2ff44b1c-e1bb-473c-bf41-e349021da113"
-      (reference "SW12") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/c47175e9-db9b-4909-bd9c-8502047d891d"
-      (reference "SW13") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/dec6077a-cb6f-4549-b522-2e72afcfe563"
-      (reference "SW14") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/ba685f3f-e1ee-4c5a-a97a-dc5f150b1406"
-      (reference "SW15") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/599afb49-07eb-4c54-9978-b4fefade6970"
-      (reference "SW16") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX200")
-    )
-    (path "/5e69f139-ba75-4ab7-b0f5-3742ddb464b8"
-      (reference "SW17") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX150")
-    )
-    (path "/b10e0334-7479-44e7-829c-83f4218496ad"
-      (reference "SW18") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/39e4a37d-1ad7-4389-9493-a737c29637f3"
-      (reference "SW19") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/8222fd69-8ea5-4af8-aff5-1820df17006c"
-      (reference "SW20") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/93586bb3-5890-42d5-ac77-28a066a607fa"
-      (reference "SW21") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/b88eb162-b970-4d59-bae9-488fbaad9caa"
-      (reference "SW22") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/29a14934-86fc-4379-b872-f4c166f5d776"
-      (reference "SW23") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/50cdb11d-761e-4c4f-9001-8209797f51d0"
-      (reference "SW24") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/73eeaeb0-c2cc-4071-bd56-019ac735adda"
-      (reference "SW25") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/083dc6f7-e3fd-4d74-82b4-a7c3e54b2b81"
-      (reference "SW26") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/b7da36dc-d69b-4ea0-8ceb-3d6f5b85951c"
-      (reference "SW27") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/46b14967-fea8-4bbb-914a-c3a4ce1223ad"
-      (reference "SW28") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/c9a2b1fa-379e-4f16-b5ad-df36479d7909"
-      (reference "SW29") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/03e9d0aa-b6ad-4b13-8715-6268320568ba"
-      (reference "SW30") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX150")
-    )
-    (path "/9083bffb-17ce-4e10-8035-a2055c435bfd"
-      (reference "SW31") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/117cf674-234f-4643-9183-52bf4fa7f7c1"
-      (reference "SW32") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX175")
-    )
-    (path "/41f10f3f-18d4-4098-89c4-1109e611bb04"
-      (reference "SW33") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/8fa925d1-fe14-414b-9f6a-1dd4425705c6"
-      (reference "SW34") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/f2628a35-9cd7-4f64-a12d-65ea5990ad55"
-      (reference "SW35") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/108e09e3-8c15-42e1-8701-1874c776cd86"
-      (reference "SW36") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/49fd5461-1813-4fe8-bf77-c9c33814977f"
-      (reference "SW37") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/8deee1b7-b67c-4dbe-888b-0d361e1c8aed"
-      (reference "SW38") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/959938d3-af2b-40cf-9476-36ffd91ae77d"
-      (reference "SW39") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/8a819168-591b-4729-94c9-681c1ed64890"
-      (reference "SW40") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/e6ba0db0-5d5c-49eb-b9f4-6fc679c5e85b"
-      (reference "SW41") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/0d205099-2550-4f04-ba30-28f91c312f0d"
-      (reference "SW42") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/dd4b7f4e-af9f-4866-a7e8-59d3e3209078"
-      (reference "SW43") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/73a0e687-3e7b-414d-9007-f969d9979402"
-      (reference "SW44") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/e1b627c0-ec47-40a2-a5a9-7c8f70301009"
-      (reference "SW45") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX225R")
-    )
-    (path "/cfe946df-b64c-4ba7-83bb-2124257dd7a9"
-      (reference "SW46") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/930e9d77-bbdf-47df-9aa4-53739ebfe52b"
-      (reference "SW47") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX125")
-    )
-    (path "/cd48aa33-8272-45c8-8d60-3f430def95a2"
-      (reference "SW48") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX_ISOEnter")
-    )
-    (path "/529daeb4-300a-41b4-883e-bd74fa941c71"
-      (reference "SW49") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX225")
-    )
-    (path "/8ec203b0-bf98-4f5b-95af-c557bad2673a"
-      (reference "SW50") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/3885bed2-f3dd-4f73-b60c-a349fb566e34"
-      (reference "SW51") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/0598c7ed-182a-4423-be67-64c948d61ee8"
-      (reference "SW52") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/e01ca30e-df4e-4496-9efa-53e7402f3097"
-      (reference "SW53") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/f9d4ed97-f43e-4725-887e-b687c33981c1"
-      (reference "SW54") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/039f5e4a-18bb-4994-91c5-88843ec1b9f6"
-      (reference "SW55") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/bdcffe3a-4b4c-4553-819d-68b3c9381883"
-      (reference "SW56") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/2111f85d-641d-40af-9c81-edd10e0edff5"
-      (reference "SW57") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/77c98ba5-0a9f-41d6-afcb-11c05e22554b"
-      (reference "SW58") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/f85545ac-4de9-40a7-b117-b61ec073ba1c"
-      (reference "SW59") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/40c5ee92-aa20-40c3-b487-aefa77dddaca"
-      (reference "SW60") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/19fb35ba-55c6-49f7-ac15-262df9a8c5ef"
-      (reference "SW61") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX175")
-    )
-    (path "/c43bdf15-8d5e-4ed3-b9c3-bdc5fd75126f"
-      (reference "SW62") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/7bb47826-323d-469d-91c8-597b65e5c79b"
-      (reference "SW63") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/60c03b8a-93ff-40a5-9432-162d33d49688"
-      (reference "SW64") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX125")
-    )
-    (path "/78330708-ef2c-4029-bc0a-a87c59bf6e27"
-      (reference "SW65") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX125")
-    )
-    (path "/594ae9ee-f6f0-492b-adad-f72051da2f55"
-      (reference "SW66") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX125")
-    )
-    (path "/fa0db928-6fc4-43b4-9811-54302c3c7c55"
-      (reference "SW67") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX125")
-    )
-    (path "/57377531-cadb-4f76-b290-3061cff503ce"
-      (reference "SW68") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX625R")
-    )
-    (path "/9f03e615-8de1-4e2c-be94-40fe02af9632"
-      (reference "SW69") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX125")
-    )
-    (path "/41330181-43af-4c8c-bcbf-6309ab5ad48e"
-      (reference "SW70") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX125")
-    )
-    (path "/90e18a02-b81d-4c90-bc43-b22b4d9415cc"
-      (reference "SW71") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/2b5004d9-e3ec-4a3f-a74f-ee5c98b182c7"
-      (reference "SW72") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/c54d63a3-8ad6-49fb-9a5b-b691c9f4c55a"
-      (reference "SW73") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/1adf300e-8bd2-4f4c-92ce-23f52edc906d"
-      (reference "SW74") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX150")
-    )
-    (path "/5a6dad5e-3a50-4980-9add-09a3d73da39b"
-      (reference "SW75") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
-    )
-    (path "/b3530da8-d23c-4bd7-974d-0efd6fe8c91d"
-      (reference "SW76") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX150")
-    )
-    (path "/6ec020ab-35a7-48fc-81e0-91b7db056a9b"
-      (reference "SW77") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX700R")
-    )
-    (path "/c53c883a-a93d-4897-9958-e6c682c9493e"
-      (reference "SW78") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX150")
-    )
     (path "/7346d95f-a5f0-4a3a-baf4-6dcb0e1c08e7"
-      (reference "SW79") (unit 1) (value "SSAL220100") (footprint "acheron_Components:SSAL220100")
+      (reference "SW1") (unit 1) (value "SSAL220100") (footprint "acheron_Components:SSAL220100")
     )
     (path "/0ae9064a-1937-49a6-83de-ba5a683dd5e9"
-      (reference "SW80") (unit 1) (value "K2-1187SQ-A4SW-06") (footprint "acheron_Hardware:K2-1187SQ-A4SW-06")
+      (reference "SW2") (unit 1) (value "K2-1187SQ-A4SW-06") (footprint "acheron_Hardware:K2-1187SQ-A4SW-06")
     )
-    (path "/c8e712f6-78e0-49b7-a1ec-8ed6eaeff69e"
-      (reference "U1") (unit 1) (value "BL24C256A-SFRC") (footprint "acheron_Components:TSSOP-8_4.4x3mm_P0.65mm")
+    (path "/f411fa35-9fbb-479e-91c5-1ddecf7270d8"
+      (reference "SW3") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
     )
-    (path "/02758f52-a200-46b5-b27b-07b7b8c9a0ad"
-      (reference "U2") (unit 1) (value "STM32F411CEU6") (footprint "acheron_Components:STM_UFQFPN-48_LQFP-48-1EP_7x7mm_P0.5mm_HandSoldering_ThermalReliefs")
+    (path "/160ae1a9-f7e9-4dd9-bdbd-a38aa5aab021"
+      (reference "SW4") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/474905c5-e3a5-40a0-a57d-e5613c2c4e3e"
+      (reference "SW5") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/35f77adf-4360-4ae3-aaf4-6e0e8746251c"
+      (reference "SW6") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/12540b2f-d2ed-4eb4-a578-c19fbd5a5055"
+      (reference "SW7") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/d855bf2f-154f-4428-b39e-57fd23bde81b"
+      (reference "SW8") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/145a3c0e-bf60-4c8c-8d73-ff14fe41fcad"
+      (reference "SW9") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/0d1e10e2-6ec2-4059-a30f-53992d70dd47"
+      (reference "SW10") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/5dc20fdb-589b-40a3-a16c-ff7f1091a000"
+      (reference "SW11") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/f154cc56-1f67-49c0-a67a-622721c07da7"
+      (reference "SW12") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/5272d95b-484e-4208-955e-9ac9e1f6fbd8"
+      (reference "SW13") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/2ff44b1c-e1bb-473c-bf41-e349021da113"
+      (reference "SW14") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/c47175e9-db9b-4909-bd9c-8502047d891d"
+      (reference "SW15") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/dec6077a-cb6f-4549-b522-2e72afcfe563"
+      (reference "SW16") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/ba685f3f-e1ee-4c5a-a97a-dc5f150b1406"
+      (reference "SW17") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/599afb49-07eb-4c54-9978-b4fefade6970"
+      (reference "SW18") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX200")
+    )
+    (path "/5e69f139-ba75-4ab7-b0f5-3742ddb464b8"
+      (reference "SW19") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX150")
+    )
+    (path "/b10e0334-7479-44e7-829c-83f4218496ad"
+      (reference "SW20") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/39e4a37d-1ad7-4389-9493-a737c29637f3"
+      (reference "SW21") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/8222fd69-8ea5-4af8-aff5-1820df17006c"
+      (reference "SW22") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/93586bb3-5890-42d5-ac77-28a066a607fa"
+      (reference "SW23") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/b88eb162-b970-4d59-bae9-488fbaad9caa"
+      (reference "SW24") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/29a14934-86fc-4379-b872-f4c166f5d776"
+      (reference "SW25") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/50cdb11d-761e-4c4f-9001-8209797f51d0"
+      (reference "SW26") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/73eeaeb0-c2cc-4071-bd56-019ac735adda"
+      (reference "SW27") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/083dc6f7-e3fd-4d74-82b4-a7c3e54b2b81"
+      (reference "SW28") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/b7da36dc-d69b-4ea0-8ceb-3d6f5b85951c"
+      (reference "SW29") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/46b14967-fea8-4bbb-914a-c3a4ce1223ad"
+      (reference "SW30") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/c9a2b1fa-379e-4f16-b5ad-df36479d7909"
+      (reference "SW31") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/03e9d0aa-b6ad-4b13-8715-6268320568ba"
+      (reference "SW32") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX150")
+    )
+    (path "/9083bffb-17ce-4e10-8035-a2055c435bfd"
+      (reference "SW33") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/117cf674-234f-4643-9183-52bf4fa7f7c1"
+      (reference "SW34") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX175")
+    )
+    (path "/41f10f3f-18d4-4098-89c4-1109e611bb04"
+      (reference "SW35") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/8fa925d1-fe14-414b-9f6a-1dd4425705c6"
+      (reference "SW36") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/f2628a35-9cd7-4f64-a12d-65ea5990ad55"
+      (reference "SW37") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/108e09e3-8c15-42e1-8701-1874c776cd86"
+      (reference "SW38") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/49fd5461-1813-4fe8-bf77-c9c33814977f"
+      (reference "SW39") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/8deee1b7-b67c-4dbe-888b-0d361e1c8aed"
+      (reference "SW40") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/959938d3-af2b-40cf-9476-36ffd91ae77d"
+      (reference "SW41") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/8a819168-591b-4729-94c9-681c1ed64890"
+      (reference "SW42") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/e6ba0db0-5d5c-49eb-b9f4-6fc679c5e85b"
+      (reference "SW43") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/0d205099-2550-4f04-ba30-28f91c312f0d"
+      (reference "SW44") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/dd4b7f4e-af9f-4866-a7e8-59d3e3209078"
+      (reference "SW45") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/73a0e687-3e7b-414d-9007-f969d9979402"
+      (reference "SW46") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/e1b627c0-ec47-40a2-a5a9-7c8f70301009"
+      (reference "SW47") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX225R")
+    )
+    (path "/cfe946df-b64c-4ba7-83bb-2124257dd7a9"
+      (reference "SW48") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/930e9d77-bbdf-47df-9aa4-53739ebfe52b"
+      (reference "SW49") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX125")
+    )
+    (path "/cd48aa33-8272-45c8-8d60-3f430def95a2"
+      (reference "SW50") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX_ISOEnter")
+    )
+    (path "/529daeb4-300a-41b4-883e-bd74fa941c71"
+      (reference "SW51") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX225")
+    )
+    (path "/8ec203b0-bf98-4f5b-95af-c557bad2673a"
+      (reference "SW52") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/3885bed2-f3dd-4f73-b60c-a349fb566e34"
+      (reference "SW53") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/0598c7ed-182a-4423-be67-64c948d61ee8"
+      (reference "SW54") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/e01ca30e-df4e-4496-9efa-53e7402f3097"
+      (reference "SW55") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/f9d4ed97-f43e-4725-887e-b687c33981c1"
+      (reference "SW56") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/039f5e4a-18bb-4994-91c5-88843ec1b9f6"
+      (reference "SW57") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/bdcffe3a-4b4c-4553-819d-68b3c9381883"
+      (reference "SW58") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/2111f85d-641d-40af-9c81-edd10e0edff5"
+      (reference "SW59") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/77c98ba5-0a9f-41d6-afcb-11c05e22554b"
+      (reference "SW60") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/f85545ac-4de9-40a7-b117-b61ec073ba1c"
+      (reference "SW61") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/40c5ee92-aa20-40c3-b487-aefa77dddaca"
+      (reference "SW62") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/19fb35ba-55c6-49f7-ac15-262df9a8c5ef"
+      (reference "SW63") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX175")
+    )
+    (path "/c43bdf15-8d5e-4ed3-b9c3-bdc5fd75126f"
+      (reference "SW64") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/7bb47826-323d-469d-91c8-597b65e5c79b"
+      (reference "SW65") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/60c03b8a-93ff-40a5-9432-162d33d49688"
+      (reference "SW66") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX125")
+    )
+    (path "/78330708-ef2c-4029-bc0a-a87c59bf6e27"
+      (reference "SW67") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX125")
+    )
+    (path "/594ae9ee-f6f0-492b-adad-f72051da2f55"
+      (reference "SW68") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX125")
+    )
+    (path "/fa0db928-6fc4-43b4-9811-54302c3c7c55"
+      (reference "SW69") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX125")
+    )
+    (path "/57377531-cadb-4f76-b290-3061cff503ce"
+      (reference "SW70") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX625R")
+    )
+    (path "/9f03e615-8de1-4e2c-be94-40fe02af9632"
+      (reference "SW71") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX125")
+    )
+    (path "/41330181-43af-4c8c-bcbf-6309ab5ad48e"
+      (reference "SW72") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX125")
+    )
+    (path "/90e18a02-b81d-4c90-bc43-b22b4d9415cc"
+      (reference "SW73") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/2b5004d9-e3ec-4a3f-a74f-ee5c98b182c7"
+      (reference "SW74") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/c54d63a3-8ad6-49fb-9a5b-b691c9f4c55a"
+      (reference "SW75") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/1adf300e-8bd2-4f4c-92ce-23f52edc906d"
+      (reference "SW76") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX150")
+    )
+    (path "/5a6dad5e-3a50-4980-9add-09a3d73da39b"
+      (reference "SW77") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX100")
+    )
+    (path "/b3530da8-d23c-4bd7-974d-0efd6fe8c91d"
+      (reference "SW78") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX150")
+    )
+    (path "/6ec020ab-35a7-48fc-81e0-91b7db056a9b"
+      (reference "SW79") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX700R")
+    )
+    (path "/c53c883a-a93d-4897-9958-e6c682c9493e"
+      (reference "SW80") (unit 1) (value "MX style mechanical keyboard switch") (footprint "acheron_MX_SolderMask:MX150")
     )
     (path "/10392d6a-d085-40d0-814f-1c5da8446b49"
-      (reference "U3") (unit 1) (value "TXS0101DBVR") (footprint "acheron_Components:SOT-23-6")
+      (reference "U1") (unit 1) (value "TXS0101DBVR") (footprint "acheron_Components:SOT-23-6")
+    )
+    (path "/c8e712f6-78e0-49b7-a1ec-8ed6eaeff69e"
+      (reference "U2") (unit 1) (value "BL24C256A-SFRC") (footprint "acheron_Components:TSSOP-8_4.4x3mm_P0.65mm")
+    )
+    (path "/02758f52-a200-46b5-b27b-07b7b8c9a0ad"
+      (reference "U3") (unit 1) (value "STM32F411CEU6") (footprint "acheron_Components:STM_UFQFPN-48_LQFP-48-1EP_7x7mm_P0.5mm_HandSoldering_ThermalReliefs")
     )
     (path "/83852dc5-8466-4952-9207-f90b62d9cb8b"
       (reference "U4") (unit 1) (value "MCP1700T-3302E/TT") (footprint "Package_TO_SOT_SMD:SOT-23")
